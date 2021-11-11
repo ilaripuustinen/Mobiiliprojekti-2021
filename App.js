@@ -5,12 +5,14 @@ import Frontpage from './components/Frontpage';
 import Planet from './components/Planet';
 import style from './style/style';
 import Horoscope from './components/Horoscope';
+import FetchApi from './components/FetchApi';
 
 export default function App() {
 
   return (
-    <NavigationContainer>
-      <Frontpage />
-    </NavigationContainer>
+    <View>
+      <Frontpage/>
+    </View>
+/* <FetchApi/> */
   );
 }

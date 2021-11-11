@@ -1,11 +1,13 @@
-import React, {View, Text} from 'react';
+import React, {useState} from 'react';
+import { StyleSheet, View, Text, Image, ScrollView } from 'react-native';
 import styles from '../style/style';
 
 export default function Frontpage() {
 
     return (
-    <div>
-       <h1 style={{textAlign: 'center'}}>Apin nimi</h1>
-    </div>
+    <View style={styles.container}>
+       <h1>Apin nimi</h1>
+       <a href="/Planet">Planeetat</a>
+    </View>
     )
 }
