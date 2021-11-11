@@ -9,6 +9,8 @@ import FetchApi from './components/FetchApi';
 export default function App() {
 
   return (
-<FetchApi/>
+    <View>
+      <Frontpage/>
+    </View>
   );
 }
