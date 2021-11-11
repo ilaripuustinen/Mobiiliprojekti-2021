@@ -4,12 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import Frontpage from './components/Frontpage';
 import Planet from './components/Planet';
 import style from './style/style';
+import FetchApi from './components/FetchApi';
 
 export default function App() {
 
   return (
-    <NavigationContainer>
-    <Frontpage />
-    </NavigationContainer>
+<FetchApi/>
   );
 }
