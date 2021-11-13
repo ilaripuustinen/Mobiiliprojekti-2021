@@ -5,6 +5,11 @@ export default StyleSheet.create({
       flex: 1,
       backgroundColor: '#f0f0f0',
       textAlign: 'center',
-      paddingTop: '400px'
+      paddingTop: '200px',
+      paddingBottom: '200px'
+    },
+    button: {
+      backgroundColor: '#f0f0f0',
+      justifyContent: 'center'
     }
 });

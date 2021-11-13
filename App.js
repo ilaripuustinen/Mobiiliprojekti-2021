@@ -6,16 +6,22 @@ import Planet from './components/Planet';
 import style from './style/style';
 import Horoscope from './components/Horoscope';
 import FetchApi from './components/FetchApi';
+import IlarinDemot from './components/IlarinDemot';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
 
   return (
-    <View>
-      <Frontpage/>
-    </View>
-<<<<<<< HEAD
-=======
-/* <FetchApi/> */
->>>>>>> 069a8fafa51b0191a6a7fe5f59e30ebb1e8afd64
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Frontpage} />
+        <Stack.Screen name="Planets" component={Planet} />
+        <Stack.Screen name="FetchApi" component={FetchApi} />
+        <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
+/* <FetchApi/> */
 }
