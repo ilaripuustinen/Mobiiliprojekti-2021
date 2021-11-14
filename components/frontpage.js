@@ -24,6 +24,11 @@ export default function Frontpage({ navigation }) {
             title="Ilarin Demot"
             onPress={() => navigation.navigate('Ilarin Demot')}
           />
+          <Button
+            style={styles.button}
+            title="Horoscope"
+            onPress={() => navigation.navigate('Horoscope')}
+          />
         </View>
       );
 }

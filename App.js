@@ -20,6 +20,7 @@ export default function App() {
         <Stack.Screen name="Planets" component={Planet} />
         <Stack.Screen name="FetchApi" component={FetchApi} />
         <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />
+        <Stack.Screen name="Horoscope" component={Horoscope} />
       </Stack.Navigator>
     </NavigationContainer>
   );
