@@ -1,14 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { Text, View } from 'react-native';
-import StyleSheet from '../style/style';
+import { Text, View, StyleSheet } from 'react-native';
+import styles from '../style/style';
 import { gsap } from 'gsap'
-import { Draggable } from "gsap/Draggable"
-import { TweenMax } from 'gsap/gsap-core';
+import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable);
-// gsap.set("#hsimage", { transformOrigin: "12.3% 46.4%" });
-// Draggable.create("hsimage", {
-// 	type: "rotation",
-// });
 
 export default function Horoscope() {
 
@@ -18,24 +13,23 @@ export default function Horoscope() {
         const rotationSnap = 360 / 14
         Draggable.create('#hsimage', {
             type: 'rotation',
-            // onDragEnd: 
-            // liveSnap: (endValue) => Math.round(endValue / rotationSnap) * rotationSnap,
+            dragClickables: true,
+            snap: (endValue) => Math.round(endValue / rotationSnap) * rotationSnap,
         })
+        const script = document.createElement('script');
+        script.src = imageMapResizer();
 
-        // gsap.to('#hsimage', 1, {
-        //     rotation: 180,
-        //     // modifiers: {
-        //     //     rotation: liveSnap
-        //     // }
-        // })
     });
-    
+    var imageMapResizer = require("image-map-resizer")
     return (
         <View>
             <div>
                 <h1 style={{textAlign: 'center'}}>Daily Horoscope</h1>
             </div>
-            <img id="hsimage" ref={hsRef} src={require("../assets/horoscopetemp.jpg")} />
+            <img id="hsimage" style={{ position: 'relative' }} useMap="#hsmap" ref={hsRef} src={require("../assets/horoscopetemp.jpg")} />
+            <map name="hsmap">
+                <area shape="circle" coords="180,180,44" alt="aquarius" href=""></area>
+            </map>
             <p id="value">0</p>
 
         </View>
