@@ -15,7 +15,7 @@ const MyTheme = {
   dark: false,
   colors: {
     primary: 'white',
-    background: 'purple',
+    background: 'pink',
     card: 'transparent',
     text: '#000000',
     border: 'transparent',
