@@ -7,25 +7,24 @@ import styles from '../style/style';
 export default function Frontpage({ navigation }) {
 
     return (
-        <View style={styles.container}>
-          <Text>Home Screen</Text>
+        <View  style={styles.container}>
           <Button
-            style={styles.button}
+            color={'transparent'}
             title="Planets"
             onPress={() => navigation.navigate('Planets')}
           />
           <Button
-            style={styles.button}
+            color={'transparent'}
             title="FetchApi"
             onPress={() => navigation.navigate('FetchApi')}
           />
           <Button
-            style={styles.button}
+            color={'transparent'}
             title="Ilarin Demot"
             onPress={() => navigation.navigate('Ilarin Demot')}
           />
           <Button
-            style={styles.button}
+            color={'transparent'}
             title="Horoscope"
             onPress={() => navigation.navigate('Horoscope')}
           />

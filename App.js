@@ -1,9 +1,9 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { DarkTheme, NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Frontpage from './components/Frontpage';
 import Planet from './components/Planet';
-import style from './style/style';
+import styles from './style/style';
 import Horoscope from './components/Horoscope';
 import FetchApi from './components/FetchApi';
 import IlarinDemot from './components/IlarinDemot';
@@ -11,12 +11,27 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
+const MyTheme = {
+  dark: false,
+  colors: {
+    primary: 'white',
+    background: 'purple',
+    card: 'transparent',
+    text: '#000000',
+    border: 'transparent',
+    notification: '#000000',
+  },
+  screenOptions: {
+    fontSize: 70,
+  }
+};
+
 export default function App() {
 
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={MyTheme}>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Frontpage} />
+        <Stack.Screen name="Home" component={Frontpage}/>
         <Stack.Screen name="Planets" component={Planet} />
         <Stack.Screen name="FetchApi" component={FetchApi} />
         <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />
@@ -24,5 +39,4 @@ export default function App() {
       </Stack.Navigator>
     </NavigationContainer>
   );
-/* <FetchApi/> */
 }
