@@ -9,6 +9,7 @@ export default function Frontpage({ navigation }) {
     return (
         <View  style={styles.container}>
           <Button
+            style={{fontFamily: 'Arial', fontSize: 30, fontWeight: 'bold'}}
             color={'transparent'}
             title="Planets"
             onPress={() => navigation.navigate('Planets')}

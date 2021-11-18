@@ -21,15 +21,13 @@ const MyTheme = {
     border: 'transparent',
     notification: '#000000',
   },
-  screenOptions: {
-    fontSize: 70,
-  }
+  fontSize: 30,
 };
 
 export default function App() {
 
   return (
-    <NavigationContainer theme={MyTheme}>
+     <NavigationContainer theme={MyTheme}>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Frontpage}/>
         <Stack.Screen name="Planets" component={Planet} />
