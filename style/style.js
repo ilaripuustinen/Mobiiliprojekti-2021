@@ -9,8 +9,4 @@ export default StyleSheet.create({
     button: {
       fontSize: '78px',
     },
-    navigation: {
-      fontSize: 40,
-      Color: 'black',
-    },
 });
