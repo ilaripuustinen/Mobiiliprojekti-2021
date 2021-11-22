@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View, Image, FlatList } from 'react-native';
+import { Text, View, Image, Pressable, ScrollView } from 'react-native';
 import styles from '../style/style';
 
-export default function Planet() {
+export default function Planet({navigation}) {
 
     // const [isLoading, setLoading] = useState(true);
     // const [data, setData] = useState([]);
@@ -16,7 +16,7 @@ export default function Planet() {
 
           const temp = Array();
           json.bodies.forEach(element => {
-            if (element.isPlanet) {
+            if (element.isPlanet && element.name.startsWith('(') === false) {
               console.log(element.name);
               temp.push(element)
             }
@@ -26,37 +26,17 @@ export default function Planet() {
         
     }, []);
 
-/*     function singlePlanet() {
-      for (let i = 0; i < data; i++)
-        if (data.isPlanet === true) {
-          setPlanet();
-        } else {
-          setNotPlanet();
-        }
-    } */
-
     return (
 
       <View style={styles.container}>
+
         <Text>Planets</Text>
         {planet.map(planet => (
-          <Text>{planet.name}</Text>
+          <Pressable>
+          {planet.name + ', ' + planet.englishName}
+          </Pressable>
         ))}
-      </View>)
-   
-      // <View style={styles.container}>
-      // {isLoading ? <Text>Loading...</Text> : 
-      // ( <View style={{ flex: 1, flexDirection: 'column', justifyContent:  'space-between'}}>
-      //   <Text style={{ fontSize: 14, color: 'green', textAlign: 'center', paddingBottom: 10}}>Planets:</Text>
-      //    <FlatList
-    //         data={data.bodies}
-    //         keyExtractor={({ id }, index) => id}
-    //         renderItem={({ item }) => (
-    //           <Text>{item.name + '. ' + item.englishName}</Text>
-    //         )}
-    //       />
-    //     </View>
-    //   )}
-    // </View> }
-    // );
+      </View>
+      
+    )
   };
