@@ -4,6 +4,7 @@ import { Text, View, Image, ImageBackground } from 'react-native';
 import Frontpage from './components/Frontpage';
 import Planet from './components/Planet';
 import Horoscope from './components/Horoscope';
+import aquarius from './components/HoroscopePages/aquarius';
 import FetchApi from './components/FetchApi';
 import IlarinDemot from './components/IlarinDemot';
 import StyleSheet from './style/style';
@@ -46,6 +47,7 @@ export default function App() {
           <Stack.Screen name="FetchApi" component={FetchApi} />
           <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />
           <Stack.Screen name="Horoscope" component={Horoscope} />
+          <Stack.Screen name="aquarius" component={aquarius} />
         </Stack.Navigator>
       </NavigationContainer>
     </ImageBackground>
