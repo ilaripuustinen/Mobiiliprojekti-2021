@@ -6,7 +6,7 @@ export default StyleSheet.create({
       textAlign: 'center',
       paddingTop: '200px',
     },
-    button: {
-      fontSize: '78px',
-    },
+    text: {
+      fontFamily: 'Merriweather',
+    }
 });

@@ -10,7 +10,6 @@ import IlarinDemot from './components/IlarinDemot';
 import StyleSheet from './style/style';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import background from "./assets/space.jpg"
 
 const Stack = createNativeStackNavigator();
 
