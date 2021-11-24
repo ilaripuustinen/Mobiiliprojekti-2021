@@ -21,6 +21,8 @@ export default function App() {
     colors: {
       ...DefaultTheme.colors,
       background: 'pink',
+      border: 'transparent',
+      text: 'black !important',
     },
   };
 
@@ -39,17 +41,22 @@ export default function App() {
     // style={StyleSheet.container}
     // source={require('./assets/space.jpg')}
     // resizeMode='stretch'>
-      <NavigationContainer theme={MyTheme}>
-        {/* Jos haluaa navigation näkyviin, poista screenOptions={{headerShown: false}} */}
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={Frontpage} />
-          <Stack.Screen name="Planets" component={Planet} />
-          <Stack.Screen name="FetchApi" component={FetchApi} />
-          <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />
-          <Stack.Screen name="Horoscope" component={Horoscope} />
-          <Stack.Screen name="aquarius" component={aquarius} />
-          <Stack.Screen name="Map" component={Map} />
-        </Stack.Navigator>
-      </NavigationContainer>
+    <NavigationContainer theme={MyTheme}>
+      {/* Jos haluaa navigation näkyviin, poista screenOptions={{headerShown: false}} */}
+      <Stack.Navigator
+        screenOptions={{
+          // headerShown: false,
+          headerTransparent: true,
+          headerTitleAlign: 'center',
+        }}>
+        <Stack.Screen name="Home" component={Frontpage} />
+        <Stack.Screen name="Planets" component={Planet} />
+        <Stack.Screen name="FetchApi" component={FetchApi} />
+        <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />
+        <Stack.Screen name="Horoscope" component={Horoscope} />
+        <Stack.Screen name="aquarius" component={aquarius} />
+        <Stack.Screen name="Map" component={Map} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }

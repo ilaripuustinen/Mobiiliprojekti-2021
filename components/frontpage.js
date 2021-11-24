@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, Button } from 'react-native';
+import { View, Text, Image, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import StyleSheet from '../style/style';
@@ -9,6 +9,7 @@ export default function Frontpage({ navigation }) {
   return (
     <View style={StyleSheet.container}>
         <Button
+        style={{fontSize:'30px !important'}}
           color={'transparent'}
           title="Planets"
           onPress={() => navigation.navigate('Planets')}
