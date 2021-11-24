@@ -20,7 +20,7 @@ export default function App() {
     ...DefaultTheme,
     colors: {
       ...DefaultTheme.colors,
-      background: 'transparent',
+      background: 'pink',
     },
   };
 
@@ -35,13 +35,13 @@ export default function App() {
   }
 
   return (
-    <ImageBackground
-    style={StyleSheet.container}
-    source={require('./assets/space.jpg')}
-    resizeMode='stretch'>
+    // <ImageBackground
+    // style={StyleSheet.container}
+    // source={require('./assets/space.jpg')}
+    // resizeMode='stretch'>
       <NavigationContainer theme={MyTheme}>
-        {/* Jos haluaa navigation näkyviin, poista screenoptions */}
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+        {/* Jos haluaa navigation näkyviin, poista screenOptions={{headerShown: false}} */}
+        <Stack.Navigator>
           <Stack.Screen name="Home" component={Frontpage} />
           <Stack.Screen name="Planets" component={Planet} />
           <Stack.Screen name="FetchApi" component={FetchApi} />
@@ -51,7 +51,5 @@ export default function App() {
           <Stack.Screen name="Map" component={Map} />
         </Stack.Navigator>
       </NavigationContainer>
-    </ImageBackground>
-
   );
 }
