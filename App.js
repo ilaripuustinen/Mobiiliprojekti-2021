@@ -7,6 +7,7 @@ import Horoscope from './components/Horoscope';
 import aquarius from './components/HoroscopePages/aquarius';
 import FetchApi from './components/FetchApi';
 import IlarinDemot from './components/IlarinDemot';
+import Map from './components/Map';
 import StyleSheet from './style/style';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -47,6 +48,7 @@ export default function App() {
           <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />
           <Stack.Screen name="Horoscope" component={Horoscope} />
           <Stack.Screen name="aquarius" component={aquarius} />
+          <Stack.Screen name="Map" component={Map} />
         </Stack.Navigator>
       </NavigationContainer>
     </ImageBackground>

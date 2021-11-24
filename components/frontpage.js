@@ -28,6 +28,11 @@ export default function Frontpage({ navigation }) {
           title="Horoscope"
           onPress={() => navigation.navigate('Horoscope')}
         />
+        <Button
+          color={'transparent'}
+          title="Map"
+          onPress={() => navigation.navigate('Map')}
+        />
     </View>
   );
 }
