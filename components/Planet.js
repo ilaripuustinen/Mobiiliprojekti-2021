@@ -13,7 +13,6 @@ export default function Planet({navigation}) {
         .then((response) => response.json())
         .then((json) => {
           console.log(json.bodies);
-
           const temp = Array();
           json.bodies.forEach(element => {
             if (element.isPlanet && element.name.startsWith('(') === false) {
