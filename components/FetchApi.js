@@ -39,7 +39,7 @@ export default function FetchApi () {
   console.log(data);
 
   useEffect(() => {
-    fetch('https://api.le-systeme-solaire.net/rest/bodies?data=id,isplanetoder=isplanet')
+    fetch('https://api.le-systeme-solaire.net/rest/bodies?filter[]=id,eq,terre')
       .then((response) => response.json())
       .then((json) => setData(json))
       .catch((error) => console.error(error))
@@ -57,7 +57,7 @@ export default function FetchApi () {
             data={data.bodies}
             keyExtractor={({ id }, index) => id}
             renderItem={({ item }) => (
-              <Text>{item.id + '. ' + item.title}</Text>
+              <Text>{item.id + ', ' + item.englishName + ', ' + item.meanRadius}</Text>
             )}
           />
         </View>
