@@ -1,14 +1,12 @@
-import { DarkTheme, NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import React from 'react';
-import { Text, View, Image, ImageBackground } from 'react-native';
-import Frontpage from './components/Frontpage';
+import Home from './components/Home';
 import Planet from './components/Planet';
 import Horoscope from './components/Horoscope';
 import aquarius from './components/HoroscopePages/aquarius';
 import FetchApi from './components/FetchApi';
 import IlarinDemot from './components/IlarinDemot';
 import Map from './components/Map';
-import StyleSheet from './style/style';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -37,10 +35,6 @@ export default function App() {
   }
 
   return (
-    // <ImageBackground
-    // style={StyleSheet.container}
-    // source={require('./assets/space.jpg')}
-    // resizeMode='stretch'>
     <NavigationContainer theme={MyTheme}>
       {/* Jos haluaa navigation näkyviin, poista screenOptions={{headerShown: false}} */}
       <Stack.Navigator
@@ -49,7 +43,7 @@ export default function App() {
           headerTransparent: true,
           headerTitleAlign: 'center',
         }}>
-        <Stack.Screen name="Home" component={Frontpage} />
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Planets" component={Planet} />
         <Stack.Screen name="FetchApi" component={FetchApi} />
         <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />

@@ -4,8 +4,8 @@ import React from 'react';
 import { StyleSheet, View, Text, Image, ScrollView, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import styles from '../style/style';
-import style from '../style/style';
+import styles from '../styles/styles';
+import style from '../styles/styles';
 
 export default function IlarinDemo({ navigation }) {
 

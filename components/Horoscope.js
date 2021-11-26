@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import styles from '../style/style';
+import styles from '../styles/styles';
 import { gsap } from 'gsap';
 import { Draggable } from 'gsap/Draggable';
 gsap.registerPlugin(Draggable);
