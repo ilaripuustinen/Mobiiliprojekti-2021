@@ -12,7 +12,10 @@ export default function aquarius() {
             </div>
             <div>
                 <h1 style={{textAlign: 'center', color: 'white'}}>Aquarius</h1>
-            </div>
+                </div>
+                <div style={{ paddingBottom: 800 }}>
+
+                </div>
             </ImageBackground>
         </View>
     )
