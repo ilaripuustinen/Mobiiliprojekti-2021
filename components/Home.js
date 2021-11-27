@@ -5,37 +5,36 @@ import styles from '../styles/styles';
 export default function Home({ navigation }) {
 
   return (
-    <View style={styles.container}>
-       {/* <ImageBackground source={require("../assets/Images/map/Map.png")} resizeMode="cover" style={styles.background}> */}
-      <Text style={styles.text}>Home screen</Text>
-      <div>
-      <Button
-          color={'transparent'}
-          title="Planets"
-          onPress={() => navigation.navigate('Planets')}
-        />
+    <ImageBackground source={require("../assets/Images/map/Map.png")} resizeMode="cover" style={styles.background}>
+      <View style={styles.container}>
+        <div style={{
+          display: 'inline-block', paddingTop: 50}}>
+            <div style={{padding: 15}}>
+          <Text
+            style={styles.text}
+            color={'transparent'}
+            title="Planets"
+            onPress={() => navigation.navigate('Planets')}>
+            Planets</Text>
+          </div>
+          <div style={{padding: 15}}>
+          <Text
+            style={styles.text}
+            color={'transparent'}
+            title="Horoscope"
+            onPress={() => navigation.navigate('Horoscope')}>
+            Horoscope</Text>
+          </div>
+          <div style={{padding: 15}}>
+          <Text
+            style={styles.text}
+            color={'transparent'}
+            title="Map"
+            onPress={() => navigation.navigate('Map')}>
+            Map</Text>
+            </div>
         </div>
-      <Button
-        color={'transparent'}
-        title="FetchApi"
-        onPress={() => navigation.navigate('FetchApi')}
-      />
-      <Button
-        color={'transparent'}
-        title="Ilarin Demot"
-        onPress={() => navigation.navigate('Ilarin Demot')}
-      />
-      <Button
-        color={'transparent'}
-        title="Horoscope"
-        onPress={() => navigation.navigate('Horoscope')}
-      />
-      <Button
-        color={'transparent'}
-        title="Map"
-        onPress={() => navigation.navigate('Map')}
-      />
-      {/* </ImageBackground> */}
-    </View>
+      </View>
+    </ImageBackground>
   );
 }

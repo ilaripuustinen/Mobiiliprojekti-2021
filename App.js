@@ -10,15 +10,16 @@ import Map from './components/Map';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Stack = createNativeStackNavigator();
 
 export default function App() {
+  
+  const Stack = createNativeStackNavigator();
 
   const MyTheme = {
     ...DefaultTheme,
     colors: {
       ...DefaultTheme.colors,
-      background: 'pink',
+      background: 'transparent',
       border: 'transparent',
       text: 'black',
     },
@@ -43,7 +44,9 @@ export default function App() {
           headerTransparent: true,
           headerTitleAlign: 'center',
         }}>
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Home" 
+        component={Home} 
+        options={{headerShown: false}}/>
         <Stack.Screen name="Planets" component={Planet} />
         <Stack.Screen name="FetchApi" component={FetchApi} />
         <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />
