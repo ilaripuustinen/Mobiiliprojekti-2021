@@ -11,8 +11,8 @@ export default function Horoscope({ navigation }) {
 
     const hsRef = useRef();
     useEffect(() => {
-        // gsap.to(hsRef.current, { rotation: "+=360" });
-        const rotationSnap = 360 / 14
+        gsap.to(hsRef.current, { rotation: "-=840", duration: 300 });
+        const rotationSnap = 360 / 14;
         Draggable.create('#hsimage', {
             type: 'rotation',
             dragClickables: true,
@@ -28,11 +28,11 @@ export default function Horoscope({ navigation }) {
         <View>
             <ImageBackground source={require("../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
             <div>
-                <h1 style={{textAlign: 'center'}}>Daily Horoscope</h1>
+                <h1 style={{textAlign: 'center', marginTop: 50, color: 'white'}}>Daily Horoscope</h1>
             </div>
             <img id="hsimage" style={{ position: 'relative' }} useMap="#hsmap" ref={hsRef} src={require("../assets/wheel.png")} />
             <map name="hsmap">
-                <area shape="circle" coords="180,180,44" alt="aquarius" onClick={() => navigation.navigate('aquarius')}></area>
+                <area shape="circle" coords="570,570,130" alt="aquarius" onClick={() => navigation.navigate('aquarius')}></area>
             </map>
             <p id="value">0</p>
         </ImageBackground>
