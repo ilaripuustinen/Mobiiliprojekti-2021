@@ -3,16 +3,13 @@ import React from 'react';
 import Home from './components/Home';
 import Planet from './components/Planet';
 import Horoscope from './components/Horoscope';
-import aquarius from './components/HoroscopePages/aquarius';
-import FetchApi from './components/FetchApi';
-import IlarinDemot from './components/IlarinDemot';
 import Map from './components/Map';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 export default function App() {
-  
+
   const Stack = createNativeStackNavigator();
 
   const MyTheme = {
@@ -44,15 +41,37 @@ export default function App() {
           headerTransparent: true,
           headerTitleAlign: 'center',
         }}>
-        <Stack.Screen name="Home" 
-        component={Home} 
-        options={{headerShown: false}}/>
-        <Stack.Screen name="Planets" component={Planet} />
-        <Stack.Screen name="FetchApi" component={FetchApi} />
-        <Stack.Screen name="Ilarin Demot" component={IlarinDemot} />
-        <Stack.Screen name="Horoscope" component={Horoscope} />
-        <Stack.Screen name="aquarius" component={aquarius} />
-        <Stack.Screen name="Map" component={Map} />
+        <Stack.Screen name="Home"
+          component={Home}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen name="Planets"
+          component={Planet}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: 'white'
+          }}
+        />
+        <Stack.Screen name="Horoscope" component={Horoscope}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: 'white'
+          }}
+        />
+        <Stack.Screen name="Map" component={Map}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: 'white'
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
