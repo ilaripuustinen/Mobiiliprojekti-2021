@@ -3,6 +3,7 @@ import React from 'react';
 import Home from './components/Home';
 import Planet from './components/Planet';
 import Horoscope from './components/Horoscope';
+import aquarius from './components/HoroscopePages/aquarius';
 import Map from './components/Map';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -64,6 +65,7 @@ export default function App() {
             headerTintColor: 'white'
           }}
         />
+        <Stack.Screen name="aquarius" component={aquarius}/>
         <Stack.Screen name="Map" component={Map}
           options={{
             headerTitleStyle: {

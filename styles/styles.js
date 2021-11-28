@@ -24,4 +24,10 @@ export default StyleSheet.create({
         blurRadius: 10,
         justifyContent: "center"
     },
+    hstext: {
+      fontFamily: 'Merriweather',
+      fontSize: 30,
+      color: 'white',
+      textAlign: 'center',
+    }
 });
