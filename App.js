@@ -65,7 +65,14 @@ export default function App() {
             headerTintColor: 'white'
           }}
         />
-        <Stack.Screen name="aquarius" component={aquarius}/>
+        <Stack.Screen name="aquarius" component={aquarius}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: 'white'
+          }}
+        />
         <Stack.Screen name="Map" component={Map}
           options={{
             headerTitleStyle: {
