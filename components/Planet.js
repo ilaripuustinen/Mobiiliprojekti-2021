@@ -9,7 +9,7 @@ export default function Planet({navigation}) {
     const [planet, setPlanet] = useState([]);
   
     useEffect(() => {
-      fetch('https://api.le-systeme-solaire.net/rest/bodies?data=id,isPlanet,name,englishName,moons')
+      fetch('https://api.le-systeme-solaire.net/rest/bodies?filter[]=id,eq,neptune')
         .then((response) => response.json())
         .then((json) => {
           console.log(json.bodies);
@@ -31,9 +31,22 @@ export default function Planet({navigation}) {
 
         <Text>Planets</Text>
         {planet.map(planet => (
-          <Pressable>
-          {planet.name + ', ' + planet.englishName}
-          </Pressable>
+          <Text>Name: {planet.name}</Text>
+        ))}
+        {planet.map(planet => (
+          <Text>Mean radius: {planet.meanRadius}</Text>          
+        ))}
+        {planet.map(planet => (
+          <Text>Gravity: {planet.gravity}</Text>          
+        ))}
+        {planet.map(planet => (
+          <Text>Mass: {planet.mass.massValue}</Text>          
+        ))}
+        {planet.map(planet => (
+          <Text>Axial tilt: {planet.axialTilt}</Text>          
+        ))}
+        {planet.map(planet => (
+          <Text>moons: {planet.moons.length}</Text>          
         ))}
       </View>
       
