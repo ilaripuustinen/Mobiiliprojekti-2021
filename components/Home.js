@@ -34,13 +34,6 @@ export default function Home({ navigation }) {
               onPress={() => navigation.navigate('Map')}>
               Map</Text>
           </div>
-          <div style={{ padding: 15 }}>
-            <Text style={styles.text}
-              color={'transparent'}
-              title="Map"
-              onPress={() => navigation.navigate('aquarius')}>
-              Aquarius</Text>
-          </div>
         </div>
       </View>
     </ImageBackground>
