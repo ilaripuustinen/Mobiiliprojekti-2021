@@ -27,24 +27,23 @@ export default function Neptune() {
   return (
 
     <View style={styles.container}>
-
+      <Text>Neptune</Text>
       <Image source={require("../../assets/Images/planets/Neptune.png")}/>
-
-      <Text>Planets</Text>
+      
       {planet.map(planet => (
-        <Text>Name: {planet.name}</Text>
+        <Text>Semimajor Axis: {planet.semimajorAxis} km</Text>
       ))}
       {planet.map(planet => (
-        <Text>Mean radius: {planet.meanRadius}</Text>
+        <Text>Mean radius: {planet.meanRadius} km</Text>
       ))}
       {planet.map(planet => (
-        <Text>Gravity: {planet.gravity}</Text>
+        <Text>Gravity: {planet.gravity} m.s-2</Text>
       ))}
       {planet.map(planet => (
-        <Text>Mass: {planet.mass.massValue}</Text>
+        <Text>Mass: {planet.mass.massValue} 10nkg</Text>
       ))}
       {planet.map(planet => (
-        <Text>Axial tilt: {planet.axialTilt}</Text>
+        <Text>Axial tilt: {planet.axialTilt}°</Text>
       ))}
       {planet.map(planet => (
         <Text>Number of moons: {planet.moons.length}</Text>

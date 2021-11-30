@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, Image, FlatList } from 'react-native';
-//import styles from '.../style/style';
+import styles from '../../style/style';
 
 export default function Venus() {
 
@@ -28,21 +28,22 @@ export default function Venus() {
 
     <View style={styles.container}>
 
-      <Text>Planets</Text>
+      <Text>Venus</Text>
+
       {planet.map(planet => (
-        <Text>Name: {planet.name}</Text>
+        <Text>Semimajor Axis: {planet.semimajorAxis} km</Text>
       ))}
       {planet.map(planet => (
-        <Text>Mean radius: {planet.meanRadius}</Text>
+        <Text>Mean radius: {planet.meanRadius} km</Text>
       ))}
       {planet.map(planet => (
-        <Text>Gravity: {planet.gravity}</Text>
+        <Text>Gravity: {planet.gravity} m.s-2</Text>
       ))}
       {planet.map(planet => (
-        <Text>Mass: {planet.mass.massValue}</Text>
+        <Text>Mass: {planet.mass.massValue} 10nkg</Text>
       ))}
       {planet.map(planet => (
-        <Text>Axial tilt: {planet.axialTilt}</Text>
+        <Text>Axial tilt: {planet.axialTilt}°</Text>
       ))}
       {planet.map(planet => (
         <Text>Number of moons: {planet.moons.length}</Text>
