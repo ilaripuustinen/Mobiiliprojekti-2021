@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, Image } from 'react-native';
-//import styles from '.../style/style';
+import styles from '../../style/style';
+
 
 export default function Neptune() {
 
@@ -26,6 +27,8 @@ export default function Neptune() {
   return (
 
     <View style={styles.container}>
+
+      <Image source={require("../../assets/Images/planets/Neptune.png")}/>
 
       <Text>Planets</Text>
       {planet.map(planet => (

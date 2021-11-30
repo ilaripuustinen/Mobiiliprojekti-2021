@@ -1,7 +1,9 @@
 import React from "react";
-import { StyleSheet, View, Image, ImageBackground } from 'react-native';
+import { StyleSheet, View, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import ScrollContainer from "react-indiana-drag-scroll";
 import VisibilitySensor from 'react-visibility-sensor';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 const planets = document.querySelectorAll("planet")
@@ -11,7 +13,7 @@ function onChange(isVisible) {
 
 }
 
-export default function App() {
+export default function Map({ navigation }) {
 
 
 
@@ -20,15 +22,59 @@ export default function App() {
         <View style={styles.container}>
 
             <ImageBackground source={require("../assets/Images/map/Map.png")} resizeMode="cover" style={styles.background}>
+
+
                 <ScrollContainer className="container">
-                    <Neptune />
-                    <Uranus />
-                    <Saturn />
-                    <Jupiter />
-                    <Mars />
-                    <Earth />
-                    <Venus />
-                    <Mercury />
+
+                    <VisibilitySensor onChange={onChange}>
+                        <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
+                            <Image source={require("../assets/Images/map/Neptune.png")} style={{ width: 100, height: 100, marginBottom: 30, marginTop: 70 }} />
+                        </TouchableOpacity>
+                    </VisibilitySensor>
+
+                    <VisibilitySensor onChange={onChange}>
+                        <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
+                            <Image source={require("../assets/Images/map/Uranus.png")} style={{ width: 100, height: 100, marginBottom: 30 }} />
+                        </TouchableOpacity>
+                    </VisibilitySensor>
+
+                    <VisibilitySensor onChange={onChange}>
+                        <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
+                            <Image source={require("../assets/Images/map/Saturn.png")} style={{ width: 300, height: 140 }} />
+                        </TouchableOpacity>
+                    </VisibilitySensor>
+
+                    <VisibilitySensor onChange={onChange}>
+                        <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
+                            <Image source={require("../assets/Images/map/Jupiter.png")} style={{ width: 320, height: 320 }} />
+                        </TouchableOpacity>
+                    </VisibilitySensor>
+
+                    <VisibilitySensor onChange={onChange}>
+                        <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
+                            <Image source={require("../assets/Images/map/Mars.png")} style={{ width: 90, height: 90, marginBottom: 40 }} />
+                        </TouchableOpacity>
+                    </VisibilitySensor>
+
+                    <VisibilitySensor onChange={onChange}>
+                        <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
+                            <Image source={require("../assets/Images/map/Earth.png")} style={{ width: 100, height: 100, marginBottom: 30 }} />
+                        </TouchableOpacity>
+                    </VisibilitySensor>
+
+                    <VisibilitySensor onChange={onChange}>
+                        <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
+                            <Image source={require("../assets/Images/map/Venus.png")} style={{ width: 100, height: 100, marginBottom: 70 }} />
+                        </TouchableOpacity>
+                    </VisibilitySensor>
+
+                    <VisibilitySensor onChange={onChange}>
+                        <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
+                            <Image source={require("../assets/Images/map/Mercury.png")} style={{ width: 70, height: 70, marginBottom: 250 }} />
+                        </TouchableOpacity>
+                    </VisibilitySensor>
+
+
                 </ScrollContainer>
             </ImageBackground>
 
@@ -37,11 +83,11 @@ export default function App() {
 }
 
 
-const Neptune = () => (
+/* const Neptune = ({ navigation }) => (
     <VisibilitySensor onChange={onChange}>
-        <View style={styles.planet}>
+        <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
             <Image source={require("../assets/Images/map/Neptune.png")} style={{ width: 100, height: 100, marginBottom: 30, marginTop: 70 }} />
-        </View>
+        </TouchableOpacity>
     </VisibilitySensor>
 );
 
@@ -85,7 +131,7 @@ const Mercury = () => (
     <View style={styles.planet}>
         <Image source={require("../assets/Images/map/Mercury.png")} style={{ width: 70, height: 70, marginBottom: 250 }} />
     </View>
-);
+); */
 
 const styles = StyleSheet.create({
     image: {
@@ -95,7 +141,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     container: {
-        
+
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'row',

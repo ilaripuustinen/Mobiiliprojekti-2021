@@ -5,6 +5,7 @@ import Planet from './components/Planet';
 import Horoscope from './components/Horoscope';
 import aquarius from './components/HoroscopePages/aquarius';
 import Map from './components/Map';
+import Neptune from './components/Planets/Neptune';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -74,6 +75,14 @@ export default function App() {
           }}
         />
         <Stack.Screen name="Map" component={Map}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: 'white'
+          }}
+        />
+        <Stack.Screen name="Neptune" component={Neptune}
           options={{
             headerTitleStyle: {
               color: 'transparent',

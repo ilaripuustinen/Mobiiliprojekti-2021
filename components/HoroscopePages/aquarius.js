@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react'
 import { Text, View, ImageBackground } from 'react-native'
-import aquariusImage from "../../assets/Images/map/Horoscope/Aquarius.png"
+import aquariusImage from "../../assets/Images/Horoscope/Aquarius.png"
 import styles from '../../styles/styles';
 
 export default function aquarius() {
