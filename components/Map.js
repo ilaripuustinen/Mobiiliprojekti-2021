@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, View, Image, ImageBackground, TouchableOpacity, Text, } from 'react-native';
 import ScrollContainer from "react-indiana-drag-scroll";
 import VisibilitySensor from 'react-visibility-sensor';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import FadeInOut from 'react-native-fade-in-out';
 
 
 const planets = document.querySelectorAll("planet")
@@ -20,7 +21,7 @@ export default function Map({ navigation }) {
     const [planetName6, setPlanetName6] = useState("");
     const [planetName7, setPlanetName7] = useState("");
     const [planetName8, setPlanetName8] = useState("");
-
+    const [visible1, setVisible1] = useState(false);
     function onChange(isVisible) {
         console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
 
@@ -36,20 +37,26 @@ export default function Map({ navigation }) {
 
                     <VisibilitySensor onChange={onChange} offset={{ top: -20, bottom: 30 }}>
                         {({ isVisible }) => {
-                            isVisible ? setPlanetName1("Neptune") : setPlanetName1("")
+
+                            isVisible ? setVisible1(true) : setVisible1(false)
+
+                            
                             return (
                                 <View style={{
                                     paddingBottom: isVisible ? 10 : 20,
-                                    paddingTop: isVisible ? 230 : 280,
+                                    paddingTop: isVisible ? 230 : 240,
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                 }}>
-                                    <Text style={{
-                                        fontSize: 30,
-                                        color: "white",
-                                    }}>
-                                        {planetName1}
-                                    </Text>
+                                    <FadeInOut visible={visible1} duration={400}>
+                                        <Text style={{
+                                            fontSize: 30,
+                                            color: "white",
+                                            paddingBottom: isVisible ? 10 : 20,
+                                        }}>
+                                            Neptune
+                                        </Text>
+                                    </FadeInOut>
                                     <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                         <Image source={require("../assets/Images/map/Neptune.png")} style={{
                                             width: isVisible ? 120 : 100,
@@ -78,12 +85,12 @@ export default function Map({ navigation }) {
                                     }}>
                                         {planetName2}
                                     </Text>
-                                <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
-                                    <Image source={require("../assets/Images/map/Uranus.png")} style={{
-                                        width: isVisible ? 120 : 100,
-                                        height: isVisible ? 120 : 100,
-                                    }} />
-                                </TouchableOpacity>
+                                    <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
+                                        <Image source={require("../assets/Images/map/Uranus.png")} style={{
+                                            width: isVisible ? 120 : 100,
+                                            height: isVisible ? 120 : 100,
+                                        }} />
+                                    </TouchableOpacity>
                                 </View>
                             )
                         }}
