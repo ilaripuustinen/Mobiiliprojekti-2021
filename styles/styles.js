@@ -21,7 +21,7 @@ export default StyleSheet.create({
     },
     background: {
         flex: 1,
-        blurRadius: 10,
+        // blurRadius: 10,
         justifyContent: "center"
     },
     hstext: {
