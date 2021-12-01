@@ -12,7 +12,14 @@ const planets = document.querySelectorAll("planet")
 
 export default function Map({ navigation }) {
 
-    const [planetName, setPlanetName] = useState("");
+    const [planetName1, setPlanetName1] = useState("");
+    const [planetName2, setPlanetName2] = useState("");
+    const [planetName3, setPlanetName3] = useState("");
+    const [planetName4, setPlanetName4] = useState("");
+    const [planetName5, setPlanetName5] = useState("");
+    const [planetName6, setPlanetName6] = useState("");
+    const [planetName7, setPlanetName7] = useState("");
+    const [planetName8, setPlanetName8] = useState("");
 
     function onChange(isVisible) {
         console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
@@ -24,22 +31,29 @@ export default function Map({ navigation }) {
         <View style={styles.container}>
 
             <ImageBackground source={require("../assets/Images/map/Map.png")} resizeMode="cover" style={styles.background}>
-
-
                 <ScrollContainer className="container">
 
-                    <VisibilitySensor onChange={onChange} offset={{ top: -100, bottom: 30 }}>
-                        {({ isVisible }) => {
-                            isVisible ? setPlanetName("Neptune") : setPlanetName("")
-                            return (
-                                <View>
-                                    <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
 
+                    <VisibilitySensor onChange={onChange} offset={{ top: -20, bottom: 30 }}>
+                        {({ isVisible }) => {
+                            isVisible ? setPlanetName1("Neptune") : setPlanetName1("")
+                            return (
+                                <View style={{
+                                    paddingBottom: isVisible ? 10 : 20,
+                                    paddingTop: isVisible ? 230 : 280,
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                }}>
+                                    <Text style={{
+                                        fontSize: 30,
+                                        color: "white",
+                                    }}>
+                                        {planetName1}
+                                    </Text>
+                                    <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                         <Image source={require("../assets/Images/map/Neptune.png")} style={{
                                             width: isVisible ? 120 : 100,
                                             height: isVisible ? 120 : 100,
-                                            marginBottom: isVisible ? 30 : 40,
-                                            marginTop: isVisible ? 290 : 300,
                                         }} />
                                     </TouchableOpacity>
                                 </View>
@@ -47,25 +61,37 @@ export default function Map({ navigation }) {
                         }}
                     </VisibilitySensor>
 
+
                     <VisibilitySensor onChange={onChange} offset={{ top: 180, bottom: 180 }}>
                         {({ isVisible }) => {
-                            isVisible ? setPlanetName("Uranus") : setPlanetName("")
+                            isVisible ? setPlanetName2("Uranus") : setPlanetName2("")
                             return (
+                                <View style={{
+                                    paddingBottom: isVisible ? 30 : 40,
+                                    paddingTop: isVisible ? 10 : 60,
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                }}>
+                                    <Text style={{
+                                        fontSize: 30,
+                                        color: "white",
+                                    }}>
+                                        {planetName2}
+                                    </Text>
                                 <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                     <Image source={require("../assets/Images/map/Uranus.png")} style={{
                                         width: isVisible ? 120 : 100,
                                         height: isVisible ? 120 : 100,
-                                        marginBottom: isVisible ? 30 : 40,
-                                        marginTop: isVisible ? 10 : 20,
                                     }} />
                                 </TouchableOpacity>
+                                </View>
                             )
                         }}
                     </VisibilitySensor>
 
                     <VisibilitySensor onChange={onChange} offset={{ top: 130, bottom: 130 }}>
-                    {({ isVisible }) => {
-                            isVisible ? setPlanetName("Saturn") : setPlanetName("")
+                        {({ isVisible }) => {
+                            isVisible ? setPlanetName3("Saturn") : setPlanetName3("")
                             return (
                                 <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                     <Image source={require("../assets/Images/map/Saturn.png")} style={{
@@ -81,6 +107,7 @@ export default function Map({ navigation }) {
 
                     <VisibilitySensor onChange={onChange} offset={{ top: 70, bottom: 70 }}>
                         {({ isVisible }) => {
+                            isVisible ? setPlanetName4("Jupiter") : setPlanetName4("")
                             return (
                                 <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                     <Image source={require("../assets/Images/map/Jupiter.png")} style={{
@@ -96,6 +123,7 @@ export default function Map({ navigation }) {
 
                     <VisibilitySensor onChange={onChange} offset={{ top: 170, bottom: 140 }}>
                         {({ isVisible }) => {
+                            isVisible ? setPlanetName5("Mars") : setPlanetName5("")
                             return (
                                 <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                     <Image source={require("../assets/Images/map/Mars.png")} style={{
@@ -111,6 +139,7 @@ export default function Map({ navigation }) {
 
                     <VisibilitySensor onChange={onChange} offset={{ top: 130, bottom: 130 }}>
                         {({ isVisible }) => {
+                            isVisible ? setPlanetName6("Earth") : setPlanetName6("")
                             return (
                                 <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                     <Image source={require("../assets/Images/map/Earth.png")} style={{
@@ -126,6 +155,7 @@ export default function Map({ navigation }) {
 
                     <VisibilitySensor onChange={onChange} offset={{ top: 130, bottom: 130 }}>
                         {({ isVisible }) => {
+                            isVisible ? setPlanetName7("Venus") : setPlanetName7("")
                             return (
                                 <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                     <Image source={require("../assets/Images/map/Venus.png")} style={{
@@ -141,6 +171,7 @@ export default function Map({ navigation }) {
 
                     <VisibilitySensor onChange={onChange} offset={{ top: 10, bottom: 0 }}>
                         {({ isVisible }) => {
+                            isVisible ? setPlanetName8("Mercury") : setPlanetName8("")
                             return (
                                 <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                     <Image source={require("../assets/Images/map/Mercury.png")} style={{
@@ -157,9 +188,30 @@ export default function Map({ navigation }) {
                 </ScrollContainer>
             </ImageBackground>
             <View style={styles.topView}>
-                <Text style={styles.topText}>
-                    {planetName}
+                {/*                 <Text style={styles.topText}>
+                    {planetName1}
                 </Text>
+                <Text style={styles.topText}>
+                    {planetName2}
+                </Text>
+                <Text style={styles.topText}>
+                    {planetName3}
+                </Text>
+                <Text style={styles.topText}>
+                    {planetName4}
+                </Text>
+                <Text style={styles.topText}>
+                    {planetName5}
+                </Text>
+                <Text style={styles.topText}>
+                    {planetName6}
+                </Text>
+                <Text style={styles.topText}>
+                    {planetName7}
+                </Text>
+                <Text style={styles.topText}>
+                    {planetName8}
+                </Text> */}
             </View>
         </View>
     );
@@ -265,6 +317,8 @@ const styles = StyleSheet.create({
         position: "fixed",
         paddingBottom: 200,
         bottom: 0,
+        justifyContent: 'center',
+        alignItems: 'center',
         width: 100,
         color: "white",
         /* Height of the footer*/
@@ -272,6 +326,16 @@ const styles = StyleSheet.create({
         background: "white"
     },
     topText: {
-        color: "white"
+        fontSize: 30,
+        color: "white",
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    topTextNeptune: {
+        fontSize: 30,
+        color: "white",
+        justifyContent: 'center',
+        alignItems: 'center',
+
     }
 })
