@@ -5,8 +5,6 @@ export default StyleSheet.create({
       flex: 1,
       textAlign: 'center',
       paddingTop: '200px',
-      fontSize: '30px !important' ,
-
     },
     text: {
       fontFamily: 'Merriweather',
