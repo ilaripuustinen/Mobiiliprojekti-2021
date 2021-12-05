@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ImageBackground, Pressable } from 'react-native';
+import { View, Image, ImageBackground, Pressable } from 'react-native';
 import styles from '../styles/styles';
 
 export default function Home({ navigation }) {
@@ -39,6 +39,13 @@ export default function Home({ navigation }) {
             title="Map"
             onPress={() => navigation.navigate('Map')}>
             Map
+          </Pressable>
+          <Pressable
+            style={styles.text}
+            color={'transparent'}
+            title="Demot"
+            onPress={() => navigation.navigate('Demot')}>
+            Demot
           </Pressable>
         </div>
       </View>

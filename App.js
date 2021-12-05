@@ -8,7 +8,7 @@ import Map from './components/Map';
 import Neptune from './components/Planets/Neptune';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import Demot from './components/Demot';
 
 export default function App() {
 
@@ -83,6 +83,14 @@ export default function App() {
           }}
         />
         <Stack.Screen name="Neptune" component={Neptune}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: 'white'
+          }}
+        />
+        <Stack.Screen name="Demot" component={Demot}
           options={{
             headerTitleStyle: {
               color: 'transparent',
