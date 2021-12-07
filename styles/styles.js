@@ -11,9 +11,8 @@ export default StyleSheet.create({
     text: {
       fontFamily: 'RussoOne',
       fontSize: 30,
-      color: '#F1F1E6',
-      backgroundColor: '#220C17',
-      // #16131D
+      color: '#DD2A2A',
+     /*  backgroundColor: '#16131D', */
       padding: 5,
       marginTop: 10,
       marginBottom: 10,
@@ -22,6 +21,7 @@ export default StyleSheet.create({
       borderTopRightRadius: 20,
       borderTopStartRadius: 20,
       alignContent: 'center',
+      alignItems: 'center',
     },
     background: {
         flex: 1,
@@ -39,6 +39,13 @@ export default StyleSheet.create({
     frontpageLogo: {
       flex: 1,
       height: 100,
-      marginBottom: 80
+      marginBottom: 40,
+      marginTop: 60
+    },
+    frontpageButton: {
+      flex: 1,
+      height: 110,
+      width: 260,
+      alignContent: 'center',
     }
 });
