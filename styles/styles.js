@@ -5,14 +5,15 @@ export default StyleSheet.create({
       flex: 1,
       textAlign: 'center',
       justifyContent: 'center',
-      paddingTop: '200px',
+/*       paddingTop: '200px', */
       fontSize: 30,
     },
     text: {
-      fontFamily: 'Merriweather',
+      fontFamily: 'RussoOne',
       fontSize: 30,
-      color: '#DD2A2A',
-      backgroundColor: '#16131D',
+      color: '#F1F1E6',
+      backgroundColor: '#220C17',
+      // #16131D
       padding: 5,
       marginTop: 10,
       marginBottom: 10,
@@ -33,5 +34,11 @@ export default StyleSheet.create({
       color: 'white',
       textAlign: 'center',
       opacity: 0.9,
+    },
+
+    frontpageLogo: {
+      flex: 1,
+      height: 100,
+      marginBottom: 80
     }
 });

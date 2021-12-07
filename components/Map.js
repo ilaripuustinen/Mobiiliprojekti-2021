@@ -235,7 +235,7 @@ export default function Map({ navigation }) {
                             isVisible ? setPlanetName8("Mercury") : setPlanetName8("")
                             return (
                                 <View style={{
-                                    paddingBottom: isVisible ? 290 : 300,
+                                    paddingBottom: isVisible ? 340 : 350,
                                     paddingTop: isVisible ? 10 : 60,
                                     justifyContent: 'center',
                                     alignItems: 'center',

@@ -1,14 +1,13 @@
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import React from 'react';
 import Home from './components/Home';
-import Planet from './components/Planet';
 import Horoscope from './components/Horoscope';
 import aquarius from './components/HoroscopePages/aquarius';
 import Map from './components/Map';
 import Neptune from './components/Planets/Neptune';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Demot from './components/Demot';
+import News from './components/News';
 
 export default function App() {
 
@@ -28,6 +27,7 @@ export default function App() {
     Helvetica: require('./assets/fonts/Helvetica.ttf'),
     Oswald: require('./assets/fonts/Oswald.ttf'),
     Merriweather: require('./assets/fonts/Merriweather-Regular.ttf'),
+    RussoOne: require('./assets/fonts/RussoOne-Regular.ttf'),
   });
 
   if (!loaded) {
@@ -49,21 +49,21 @@ export default function App() {
             headerShown: false
           }}
         />
-        <Stack.Screen name="Planets"
+        {/* <Stack.Screen name="Planets"
           component={Planet}
           options={{
             headerTitleStyle: {
               color: 'transparent',
             },
-            headerTintColor: 'white'
+            headerTintColor: '#F1F1E6'
           }}
-        />
+        /> */}
         <Stack.Screen name="Horoscope" component={Horoscope}
           options={{
             headerTitleStyle: {
               color: 'transparent',
             },
-            headerTintColor: 'white'
+            headerTintColor: '#F1F1E6'
           }}
         />
         <Stack.Screen name="aquarius" component={aquarius}
@@ -71,7 +71,7 @@ export default function App() {
             headerTitleStyle: {
               color: 'transparent',
             },
-            headerTintColor: 'white'
+            headerTintColor: '#F1F1E6'
           }}
         />
         <Stack.Screen name="Map" component={Map}
@@ -79,7 +79,7 @@ export default function App() {
             headerTitleStyle: {
               color: 'transparent',
             },
-            headerTintColor: 'white'
+            headerTintColor: '#F1F1E6'
           }}
         />
         <Stack.Screen name="Neptune" component={Neptune}
@@ -87,15 +87,15 @@ export default function App() {
             headerTitleStyle: {
               color: 'transparent',
             },
-            headerTintColor: 'white'
+            headerTintColor: '#F1F1E6'
           }}
         />
-        <Stack.Screen name="Demot" component={Demot}
+        <Stack.Screen name="News" component={News}
           options={{
             headerTitleStyle: {
               color: 'transparent',
             },
-            headerTintColor: 'white'
+            headerTintColor: '#F1F1E6'
           }}
         />
       </Stack.Navigator>
