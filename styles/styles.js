@@ -9,10 +9,11 @@ export default StyleSheet.create({
       fontSize: 30,
     },
     text: {
-      fontFamily: 'Merriweather',
+      fontFamily: 'RussoOne',
       fontSize: 30,
-      color: '#DD2A2A',
-      backgroundColor: '#16131D',
+      color: '#F1F1E6',
+      backgroundColor: '#220C17',
+      // #16131D
       padding: 5,
       marginTop: 10,
       marginBottom: 10,

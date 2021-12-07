@@ -8,7 +8,7 @@ export default function Home({ navigation }) {
     <ImageBackground source={require("../assets/Images/FrontpageBackground.png")} resizeMode="cover" style={styles.background}>
       
       <View style={styles.container}>
-        {/* <div style={{ height: 200 }}> */}
+        
           <View style={{justifyContent:'center'}} >
             <Image 
               source={require('../assets/Images/pitkälogo.png')} style={styles.frontpageLogo} />
@@ -23,10 +23,24 @@ export default function Home({ navigation }) {
           <Pressable
             style={styles.text}
             color={'transparent'}
+            title="Map"
+            onPress={() => navigation.navigate('Map')}>
+            Solar System
+          </Pressable>
+          <Pressable
+            style={styles.text}
+            color={'transparent'}
+            title="News"
+            onPress={() => navigation.navigate('News')}>
+            News
+          </Pressable>
+          {/* <Pressable
+            style={styles.text}
+            color={'transparent'}
             title="Planets"
             onPress={() => navigation.navigate('Planets')}>
             Planets
-          </Pressable>
+          </Pressable> */}
           <Pressable
             style={styles.text}
             color={'transparent'}
@@ -34,20 +48,7 @@ export default function Home({ navigation }) {
             onPress={() => navigation.navigate('Horoscope')}>
             Horoscope
           </Pressable>
-          <Pressable
-            style={styles.text}
-            color={'transparent'}
-            title="Map"
-            onPress={() => navigation.navigate('Map')}>
-            Map
-          </Pressable>
-          <Pressable
-            style={styles.text}
-            color={'transparent'}
-            title="Demot"
-            onPress={() => navigation.navigate('Demot')}>
-            Demot
-          </Pressable>
+          
         </div>
       </View>
     </ImageBackground>
