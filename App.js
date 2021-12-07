@@ -1,7 +1,7 @@
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import React from 'react';
 import Home from './components/Home';
-import Planet from './components/Planet';
+
 import Horoscope from './components/Horoscope';
 import aquarius from './components/HoroscopePages/aquarius';
 import Map from './components/Map';
@@ -49,7 +49,7 @@ export default function App() {
             headerShown: false
           }}
         />
-        <Stack.Screen name="Planets"
+        {/* <Stack.Screen name="Planets"
           component={Planet}
           options={{
             headerTitleStyle: {
@@ -57,7 +57,7 @@ export default function App() {
             },
             headerTintColor: 'white'
           }}
-        />
+        /> */}
         <Stack.Screen name="Horoscope" component={Horoscope}
           options={{
             headerTitleStyle: {
