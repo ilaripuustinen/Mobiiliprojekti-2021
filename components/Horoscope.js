@@ -3,21 +3,18 @@ import { Text, View, StyleSheet, ImageBackground } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from '../styles/styles';
-import { gsap } from 'gsap';
-import { Draggable } from 'gsap/Draggable';
-gsap.registerPlugin(Draggable);
 
 export default function Horoscope({ navigation }) {
 
     const hsRef = useRef();
     useEffect(() => {
-        gsap.to(hsRef.current, { rotation: "-=840", duration: 300 });
-        const rotationSnap = 360 / 14;
-        Draggable.create('#hsimage', {
-            type: 'rotation',
-            dragClickables: true,
-            snap: (endValue) => Math.round(endValue / rotationSnap) * rotationSnap, // <==EI TOIMI
-        })
+        // gsap.to(hsRef.current, { rotation: "-=840", duration: 300 });
+        // const rotationSnap = 360 / 14;
+        // Draggable.create('#hsimage', {
+        //     type: 'rotation',
+        //     dragClickables: true,
+        //     snap: (endValue) => Math.round(endValue / rotationSnap) * rotationSnap, // <==EI TOIMI
+        // })
         const script = document.createElement('script');
         script.src = imageMapResizer();
 

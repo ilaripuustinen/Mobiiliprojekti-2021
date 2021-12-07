@@ -32,5 +32,6 @@ export default StyleSheet.create({
       fontSize: 30,
       color: 'white',
       textAlign: 'center',
+      opacity: 0.9,
     }
 });
