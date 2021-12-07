@@ -5,7 +5,7 @@ export default StyleSheet.create({
       flex: 1,
       textAlign: 'center',
       justifyContent: 'center',
-      paddingTop: '200px',
+/*       paddingTop: '200px', */
       fontSize: 30,
     },
     text: {
@@ -32,5 +32,11 @@ export default StyleSheet.create({
       fontSize: 30,
       color: 'white',
       textAlign: 'center',
+    },
+
+    frontpageLogo: {
+      flex: 1,
+      height: 100,
+      marginBottom: 80
     }
 });
