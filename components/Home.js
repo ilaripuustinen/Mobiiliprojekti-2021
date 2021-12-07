@@ -5,12 +5,13 @@ import styles from '../styles/styles';
 export default function Home({ navigation }) {
 
   return (
-    <ImageBackground source={require("../assets/Images/map/Map.png")} resizeMode="cover" style={styles.background}>
+    <ImageBackground source={require("../assets/Images/FrontpageBackground.png")} resizeMode="cover" style={styles.background}>
+      
       <View style={styles.container}>
         {/* <div style={{ height: 200 }}> */}
-          <View>
-            <Image
-              source={'./assets/logoilarille.png'} />
+          <View style={{justifyContent:'center'}} >
+            <Image 
+              source={require('../assets/Images/pitkälogo.png')} style={styles.frontpageLogo} />
           </View>
         {/* </div> */}
         <div style={{
