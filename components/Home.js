@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, ImageBackground, Pressable, Text } from 'react-native';
-//import "@fontsource/russo-one"
+import "@fontsource/russo-one"
 import styles from '../styles/styles';
 
 export default function Home({ navigation }) {
