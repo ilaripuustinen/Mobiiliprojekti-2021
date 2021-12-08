@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, Image } from 'react-native';
-import styles from '../../style/style';
+import styles from '../../styles/styles';
 
 
 export default function Neptune() {
