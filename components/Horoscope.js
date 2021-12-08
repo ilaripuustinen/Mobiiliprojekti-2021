@@ -31,7 +31,7 @@ export default function Horoscope({ navigation }) {
             <map name="hsmap">
                 <area shape="circle" coords="570,570,130" alt="Aquarius" onClick={() => navigation.navigate('Aquarius')}></area>
             </map>
-            {/* <div style={{paddingBottom: 200}}></div> */}
+            <View style={{paddingBottom: 200}}></View>
             <p id="value">0</p>
         </ImageBackground>
         </View>
