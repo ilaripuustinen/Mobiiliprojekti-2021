@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react'
-import { Text, View, ImageBackground } from 'react-native'
+import { Text, View, ImageBackground, Image } from 'react-native'
 import aquariusImage from "../../assets/Images/Horoscope/Aquarius.png"
 import styles from '../../styles/styles';
 
@@ -31,10 +31,10 @@ export default function aquarius() {
                 <View>
                     <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
                         <View style={{ alignSelf: 'center', marginTop: 100 }}>
-                            <img height={300} src={aquariusImage}></img>
+                            <Image height={300} source={aquariusImage}></Image>
                         </View>
                         <View>
-                            <h1 style={{ textAlign: 'center', color: 'white' }}>Aquarius</h1>
+                            <Text style={{ textAlign: 'center', color: 'white' }}>Aquarius</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
                         <View style={{ paddingBottom: 200 }}>
@@ -44,7 +44,7 @@ export default function aquarius() {
             ) : (
                     <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
                         <View>
-                        <h1 style={{ textAlign: 'center', color: 'white' }}>Loading</h1>
+                        <Text style={{ textAlign: 'center', color: 'white' }}>Loading</Text>
                         </View>
                     </ImageBackground>
                     
