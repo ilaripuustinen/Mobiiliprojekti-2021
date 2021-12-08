@@ -30,22 +30,22 @@ export default function aquarius() {
             {loading === false ? (   //latausruuta
                 <View>
                     <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
-                        <div style={{ alignSelf: 'center', marginTop: 100 }}>
+                        <View style={{ alignSelf: 'center', marginTop: 100 }}>
                             <img height={300} src={aquariusImage}></img>
-                        </div>
-                        <div>
+                        </View>
+                        <View>
                             <h1 style={{ textAlign: 'center', color: 'white' }}>Aquarius</h1>
-                        </div>
+                        </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
-                        <div style={{ paddingBottom: 200 }}>
-                        </div>
+                        <View style={{ paddingBottom: 200 }}>
+                        </View>
                     </ImageBackground>
                 </View>
             ) : (
                     <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
-                        <div>
+                        <View>
                         <h1 style={{ textAlign: 'center', color: 'white' }}>Loading</h1>
-                        </div>
+                        </View>
                     </ImageBackground>
                     
               )}

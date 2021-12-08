@@ -24,14 +24,14 @@ export default function Horoscope({ navigation }) {
     return (
         <View>
             <ImageBackground source={require("../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
-            <div>
+            
                 <h1 style={{textAlign: 'center', marginTop: 50, color: 'white'}}>Daily Horoscope</h1>
-            </div>
+            
             <img id="hsimage" style={{ position: 'relative' }} useMap="#hsmap" ref={hsRef} src={require("../assets/wheel.png")} />
             <map name="hsmap">
                 <area shape="circle" coords="570,570,130" alt="Aquarius" onClick={() => navigation.navigate('Aquarius')}></area>
             </map>
-            <div style={{paddingBottom: 200}}></div>
+            {/* <div style={{paddingBottom: 200}}></div> */}
             <p id="value">0</p>
         </ImageBackground>
         </View>
