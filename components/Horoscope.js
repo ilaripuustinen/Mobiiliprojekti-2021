@@ -29,7 +29,7 @@ export default function Horoscope({ navigation }) {
             </div>
             <img id="hsimage" style={{ position: 'relative' }} useMap="#hsmap" ref={hsRef} src={require("../assets/wheel.png")} />
             <map name="hsmap">
-                <area shape="circle" coords="570,570,130" alt="aquarius" onClick={() => navigation.navigate('aquarius')}></area>
+                <area shape="circle" coords="570,570,130" alt="Aquarius" onClick={() => navigation.navigate('Aquarius')}></area>
             </map>
             <div style={{paddingBottom: 200}}></div>
             <p id="value">0</p>
