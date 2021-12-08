@@ -8,6 +8,7 @@ import Neptune from './components/Planets/Neptune';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import News from './components/News';
+import Details from './components/Details';
 
 export default function App() {
 
@@ -92,6 +93,16 @@ export default function App() {
         />
         <Stack.Screen name="News" component={News}
           options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: '#F1F1E6'
+          }}
+        />
+        <Stack.Screen name="Details" component={Details}
+          options={{
+            title: "Details",
+            headerTitle: "Details",
             headerTitleStyle: {
               color: 'transparent',
             },

@@ -47,5 +47,17 @@ export default StyleSheet.create({
       height: 110,
       width: 260,
       alignContent: 'center',
+    },
+    thumbnail: {
+      width: 250,
+      height: 250,
+    },
+    imageWrapper: {
+      alignItems: 'center',
+    },
+    newsImage: {
+      width: 350,
+      height: 350,
+      marginBottom: 10,
     }
 });
