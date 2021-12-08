@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, Image, FlatList } from 'react-native';
-import styles from '../../style/style';
+import styles from '../../styles/styles';
 
 export default function Saturn() {
 

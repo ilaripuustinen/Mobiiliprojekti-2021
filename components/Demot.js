@@ -5,11 +5,11 @@ import styles from '../styles/styles';
 
 export default function Demot() {
     return (
-        <div>
+     
             <View>
                 <Image
                     source={'./assets/logoilarille.png'} />
             </View>
-        </div>
+     
     )
 }
