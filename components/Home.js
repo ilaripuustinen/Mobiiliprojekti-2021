@@ -14,13 +14,8 @@ export default function Home({ navigation }) {
             <Image 
               source={require('../assets/Images/pitkälogo.png')} style={styles.frontpageLogo} />
           </View>
-        {/* </div> */}
-        <div style={{
-          display: 'inline-block',
-          justifyContent: 'center',
-          marginLeft: 50,
-          marginRight: 50,
-        }}>
+        
+         
 
           <Pressable
             style={styles.text}
@@ -48,8 +43,6 @@ export default function Home({ navigation }) {
 
 
 
-
-        </div>
 
         <Image source={require('../assets/Images/smallEarth.png')} style={{ width: 500, height: 260, bottom: 0 }}></Image>
       </View>
