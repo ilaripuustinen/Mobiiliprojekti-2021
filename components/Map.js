@@ -6,7 +6,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 /* import FadeInOut from 'react-native-fade-in-out'; */
 
 
-const planets = document.querySelectorAll("planet")
+
 
 
 
@@ -32,13 +32,12 @@ export default function Map({ navigation }) {
 
             <ImageBackground source={require("../assets/Images/map/Map.png")} resizeMode="cover" style={styles.background}>
                 <ScrollContainer className="container">
+                    <Text style={{color: "white"}}>Tätä pitää korjailla</Text>
 
-
-                    <VisibilitySensor onChange={onChange} offset={{ top: -20, bottom: 30 }}>
+{/*                     <VisibilitySensor onChange={onChange} offset={{ top: -20, bottom: 30 }}>
                         {({ isVisible }) => {
                              isVisible ? setPlanetName1("Neptune") : setPlanetName1("")
-/* 
-                            isVisible ? setVisible1(true) : setVisible1(false) */
+
 
 
                             return (
@@ -48,14 +47,14 @@ export default function Map({ navigation }) {
                                     justifyContent: 'center',
                                     alignItems: 'center',
                                 }}>
-{/*                                     <FadeInOut visible={visible1} duration={400}> */}
+
                                         <Text style={{
                                             fontSize: 30,
                                             color: "white",
                                         }}>
                                             {planetName1}
                                         </Text>
-{/*                                     </FadeInOut> */}
+
                                     <TouchableOpacity style={styles.planet} onPress={() => navigation.navigate('Neptune')}>
                                         <Image source={require("../assets/Images/map/Neptune.png")} style={{
                                             width: isVisible ? 120 : 100,
@@ -65,9 +64,9 @@ export default function Map({ navigation }) {
                                 </View>
                             )
                         }}
-                    </VisibilitySensor>
+                    </VisibilitySensor> */}
 
-
+{/* 
                     <VisibilitySensor onChange={onChange} offset={{ top: 180, bottom: 180 }}>
                         {({ isVisible }) => {
                             isVisible ? setPlanetName2("Uranus") : setPlanetName2("")
@@ -93,9 +92,9 @@ export default function Map({ navigation }) {
                                 </View>
                             )
                         }}
-                    </VisibilitySensor>
+                    </VisibilitySensor> */}
 
-                    <VisibilitySensor onChange={onChange} offset={{ top: 130, bottom: 130 }}>
+{/*                     <VisibilitySensor onChange={onChange} offset={{ top: 130, bottom: 130 }}>
                         {({ isVisible }) => {
                             isVisible ? setPlanetName3("Saturn") : setPlanetName3("")
                             return (
@@ -120,9 +119,9 @@ export default function Map({ navigation }) {
                                 </View>
                             )
                         }}
-                    </VisibilitySensor>
+                    </VisibilitySensor> */}
 
-                    <VisibilitySensor onChange={onChange} offset={{ top: 70, bottom: 70 }}>
+{/*                     <VisibilitySensor onChange={onChange} offset={{ top: 70, bottom: 70 }}>
                         {({ isVisible }) => {
                             isVisible ? setPlanetName4("Jupiter") : setPlanetName4("")
                             return (
@@ -147,8 +146,8 @@ export default function Map({ navigation }) {
                                 </View>
                             )
                         }}
-                    </VisibilitySensor>
-
+                    </VisibilitySensor> */}
+{/* 
                     <VisibilitySensor onChange={onChange} offset={{ top: 170, bottom: 140 }}>
                         {({ isVisible }) => {
                             isVisible ? setPlanetName5("Mars") : setPlanetName5("")
@@ -174,9 +173,9 @@ export default function Map({ navigation }) {
                                 </View>
                             )
                         }}
-                    </VisibilitySensor>
+                    </VisibilitySensor> */}
 
-                    <VisibilitySensor onChange={onChange} offset={{ top: 130, bottom: 130 }}>
+{/*                     <VisibilitySensor onChange={onChange} offset={{ top: 130, bottom: 130 }}>
                         {({ isVisible }) => {
                             isVisible ? setPlanetName6("Earth") : setPlanetName6("")
                             return (
@@ -201,9 +200,9 @@ export default function Map({ navigation }) {
                                 </View>
                             )
                         }}
-                    </VisibilitySensor>
+                    </VisibilitySensor> */}
 
-                    <VisibilitySensor onChange={onChange} offset={{ top: 130, bottom: 130 }}>
+{/*                     <VisibilitySensor onChange={onChange} offset={{ top: 130, bottom: 130 }}>
                         {({ isVisible }) => {
                             isVisible ? setPlanetName7("Venus") : setPlanetName7("")
                             return (
@@ -229,8 +228,8 @@ export default function Map({ navigation }) {
                             )
                         }}
                     </VisibilitySensor>
-
-                    <VisibilitySensor onChange={onChange} offset={{ top: 10, bottom: 0 }}>
+ */}
+{/*                     <VisibilitySensor onChange={onChange} offset={{ top: 10, bottom: 0 }}>
                         {({ isVisible }) => {
                             isVisible ? setPlanetName8("Mercury") : setPlanetName8("")
                             return (
@@ -256,7 +255,7 @@ export default function Map({ navigation }) {
                             )
                         }}
                     </VisibilitySensor>
-
+ */}
                 </ScrollContainer>
             </ImageBackground>
             <View style={styles.topView}>
@@ -355,7 +354,6 @@ const styles = StyleSheet.create({
     },
     background: {
         flex: 1,
-        blurRadius: 10,
         justifyContent: "center"
     },
     planet: {
@@ -363,10 +361,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
 
-        "&:hover": {
-            width: +20,
-            height: +20
-        }
+
     },
 
     planetVisible: {
@@ -375,7 +370,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: 120,
         height: 120,
-        animation: "inAnimation 250ms ease-in"
+
     },
     planetInvisible: {
         justifyContent: 'center',
@@ -383,10 +378,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: 100,
         height: 100,
-        animation: "outAnimation 270ms ease-out",
+
     },
     topView: {
-        position: "fixed",
         paddingBottom: 200,
         bottom: 0,
         justifyContent: 'center',
@@ -395,7 +389,6 @@ const styles = StyleSheet.create({
         color: "white",
         /* Height of the footer*/
         height: 40,
-        background: "white"
     },
     topText: {
         fontSize: 30,
