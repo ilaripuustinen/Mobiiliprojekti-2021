@@ -2,7 +2,7 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import React from 'react';
 import Home from './components/Home';
 import Horoscope from './components/Horoscope';
-import aquarius from './components/HoroscopePages/aquarius';
+import Aquarius from './components/HoroscopePages/Aquarius';
 import Map from './components/Map';
 import Neptune from './components/Planets/Neptune';
 import { useFonts } from 'expo-font';
@@ -67,7 +67,7 @@ export default function App() {
             headerTintColor: '#F1F1E6'
           }}
         />
-        <Stack.Screen name="aquarius" component={aquarius}
+        <Stack.Screen name="Aquarius" component={Aquarius}
           options={{
             headerTitleStyle: {
               color: 'transparent',
