@@ -26,8 +26,10 @@ export default function Horoscope({ navigation }) {
             <ImageBackground source={require("../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
             
                 <Text style={{textAlign: 'center', marginTop: 50, color: 'white'}}>Daily Horoscope</Text>
-            
-                <Image id="hsimage" style={{ position: 'relative', width: 200, height: 200 }} onClick={() => navigation.navigate('Aquarius')} useMap="#hsmap" ref={hsRef} source={require("../assets/wheel.png")} />
+                <View style={{ display: 'flex',  flexWrap: 'wrap'}}>
+                <Image id="hsimage" style={{ width: 100, height: 100 }} onClick={() => navigation.navigate('Aquarius')} useMap="#hsmap" ref={hsRef} source={require("../assets/Images/Horoscope/Aquarius.png")} />
+                <Image id="hsimage" style={{ width: 100, height: 100 }} onClick={() => navigation.navigate('Aquarius')} useMap="#hsmap" ref={hsRef} source={require("../assets/Images/Horoscope/Aries.png")} />
+                </View>
             {/* <map name="hsmap">
                 <area shape="circle" coords="570,570,130" alt="Aquarius" onClick={() => navigation.navigate('Aquarius')}></area>
             </map> */}
