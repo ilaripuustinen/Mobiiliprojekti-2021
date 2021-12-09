@@ -10,8 +10,9 @@ export default function Home({ navigation }) {
       <View style={styles.frontpageContainer}>
 
         <View >
-          <Image
-            source={require('../assets/Images/pitkälogo.png')} style={styles.frontpageLogo} />
+          <Pressable  onPress={() => navigation.navigate('Neptune')}>
+          <Image source={require('../assets/Images/pitkälogo.png')} style={styles.frontpageLogo} />
+          </Pressable>
         </View>
 
         <Pressable
