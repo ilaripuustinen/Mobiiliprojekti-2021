@@ -33,11 +33,13 @@ export default StyleSheet.create({
   },
   hstext: {
     fontFamily: 'RussoOne',
-    fontSize: 30,
+    fontSize: 20,
     color: 'white',
     textAlign: 'center',
     opacity: 0.9,
     marginTop: 20,
+    marginRight: 15,
+    marginLeft: 15,
   },
   hsstyle: {
     // flex: 1,
@@ -61,6 +63,12 @@ export default StyleSheet.create({
     borderColor: 'white',
     borderRadius: 5,
     borderWidth: 0.5,
+  },
+  loadingLogo: {
+    width: 300,
+    height: 300,
+    // justifyContent: 'center',
+    alignSelf: 'center',
   },
 
   thumbnail: {

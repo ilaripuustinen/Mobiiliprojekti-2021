@@ -44,6 +44,7 @@ export default function Aquarius() {
             ) : (
                     <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
                         <View>
+                        <Image style={ styles.loadingLogo } source={require("../../assets/logoilarille.png")}></Image>
                         <Text style={ styles.hstext }>Loading</Text>
                         </View>
                     </ImageBackground>
