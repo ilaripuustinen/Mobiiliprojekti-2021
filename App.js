@@ -3,6 +3,7 @@ import React from 'react';
 import Home from './components/Home';
 import Horoscope from './components/Horoscope';
 import Aquarius from './components/HoroscopePages/Aquarius';
+import Aries from './components/HoroscopePages/Aries';
 import Map from './components/Map';
 import Neptune from './components/Planets/Neptune';
 import { useFonts } from 'expo-font';
@@ -68,6 +69,14 @@ export default function App() {
           }}
         />
         <Stack.Screen name="Aquarius" component={Aquarius}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: '#F1F1E6'
+          }}
+        />
+        <Stack.Screen name="Aries" component={Aries}
           options={{
             headerTitleStyle: {
               color: 'transparent',

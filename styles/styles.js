@@ -28,6 +28,9 @@ export default StyleSheet.create({
     // blurRadius: 10,
     justifyContent: "center"
   },
+  hsbackground: {
+    justifyContent:"center"
+  },
   hstext: {
     fontFamily: 'RussoOne',
     fontSize: 30,
@@ -37,15 +40,15 @@ export default StyleSheet.create({
     marginTop: 20,
   },
   hsstyle: {
-    flex: 1,
+    // flex: 1,
     flexWrap: 'wrap',
     justifyContent: 'center',
     flexDirection: 'row',
   },
   hsImage: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
+    // flex: 1,
+    // flexDirection: 'row',
+    // alignItems: 'center',
     width: 115,
     height: 115,
     maxHeight: 125,
@@ -55,7 +58,6 @@ export default StyleSheet.create({
     marginTop: 10,
     marginRight: 5,
     marginLeft: 5,
-    borderStyle: 'solid',
     borderColor: 'white',
     borderRadius: 5,
     borderWidth: 0.5,

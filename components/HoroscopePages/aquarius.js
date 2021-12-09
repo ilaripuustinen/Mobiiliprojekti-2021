@@ -3,7 +3,7 @@ import { Text, View, ImageBackground, Image } from 'react-native'
 import aquariusImage from "../../assets/Images/Horoscope/Aquarius.png"
 import styles from '../../styles/styles';
 
-export default function aquarius() {
+export default function Aquarius() {
 
     
     const [loading, setLoading] = useState(true)

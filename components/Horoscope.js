@@ -25,33 +25,39 @@ export default function Horoscope({ navigation }) {
 
     return (
         <View>
-            <ImageBackground source={require("../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
-            
+            <ImageBackground source={require("../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.hsbackground}>
+                <View style={{paddingTop: 25}}></View>
                 <Text style={ styles.hstext }>Daily Horoscope</Text>
+                <View style={{paddingBottom: 60}}></View>
                 <View style={ styles.hsstyle }>
                     <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Aquarius.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Aries.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Cancer.png")} />
-                </View>
-                <View style={ styles.hsstyle }>
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Capricorn.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Gemini.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Leo.png")} />
-                </View>
-                <View style={ styles.hsstyle }>
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Libra.png")} />
                     <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Pisces.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Sagittarius.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aries')} source={require("../assets/Images/Horoscope/Aries.png")} />
+                    
+                </View>
+                <View style={ styles.hsstyle }>
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Taurus.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Gemini.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Cancer.png")} />
+                    
+                </View>
+                <View style={ styles.hsstyle }>
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Leo.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Virgo.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Libra.png")} />
+                    
+                    
                 </View>
                 <View style={ styles.hsstyle }>
                     <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Scorpio.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Taurus.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Virgo.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Sagittarius.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Capricorn.png")} />  
                 </View>
+                <View style={{paddingBottom: 200}}></View>
             {/* <map name="hsmap">
                 <area shape="circle" coords="570,570,130" alt="Aquarius" onClick={() => navigation.navigate('Aquarius')}></area>
             </map> */}
-            <View style={{paddingBottom: 200}}></View>
+            {/* <View style={{paddingBottom: 200}}></View> */}
         </ImageBackground>
         </View>
         
