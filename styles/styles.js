@@ -60,9 +60,7 @@ export default StyleSheet.create({
     marginTop: 10,
     marginRight: 5,
     marginLeft: 5,
-    borderColor: 'white',
-    borderRadius: 5,
-    borderWidth: 0.5,
+
   },
   loadingLogo: {
     width: 300,
