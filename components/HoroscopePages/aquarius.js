@@ -31,10 +31,10 @@ export default function aquarius() {
                 <View>
                     <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
                         <View style={{ alignSelf: 'center', marginTop: 100 }}>
-                            <Image height={300} source={aquariusImage}></Image>
+                            <Image style={{width: 200, height: 200,}} source={aquariusImage}></Image>
                         </View>
                         <View>
-                            <Text style={{ textAlign: 'center', color: 'white' }}>Aquarius</Text>
+                            <Text style={ styles.hstext }>Aquarius</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
                         <View style={{ paddingBottom: 200 }}>

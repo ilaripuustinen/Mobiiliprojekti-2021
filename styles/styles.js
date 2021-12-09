@@ -29,11 +29,36 @@ export default StyleSheet.create({
         justifyContent: "center"
     },
     hstext: {
-      fontFamily: 'Merriweather',
+      fontFamily: 'RussoOne',
       fontSize: 30,
       color: 'white',
       textAlign: 'center',
       opacity: 0.9,
+      marginTop: 20,
+    },
+    hsstyle: {
+      flex: 1,
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      flexDirection: 'row',
+    },
+    hsImage: {
+      flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
+      width: 115,
+      height: 115,
+      maxHeight: 125,
+      maxWidth: 125,
+      // minWidth: 100,
+      // minHeight: 100,
+      marginTop: 10,
+      marginRight: 5,
+      marginLeft: 5,
+      border: 'solid',
+      borderColor: 'white',
+      borderRadius: 5,
+      borderWidth: 0.5,
     },
 
     frontpageLogo: {

@@ -13,10 +13,12 @@ export default function Horoscope({ navigation }) {
         // Draggable.create('#hsimage', {
         //     type: 'rotation',
         //     dragClickables: true,
-        //     snap: (endValue) => Math.round(endValue / rotationSnap) * rotationSnap, // <==EI TOIMI
+        //     snap: (endValue) => Math.round(endValue / rotationSnap) * rotationSnap, // <==snap EI TOIMI
         // })
         // const script = document.createElement('script');
         // script.src = imageMapResizer();
+
+        // ******jos meinaa palata kiekkoon vielä, laita id="hsimage" ja ref={hsRef} kuvaan******
 
     });
     // var imageMapResizer = require("image-map-resizer")
@@ -25,10 +27,26 @@ export default function Horoscope({ navigation }) {
         <View>
             <ImageBackground source={require("../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
             
-                <Text style={{textAlign: 'center', marginTop: 50, color: 'white'}}>Daily Horoscope</Text>
-                <View style={{ display: 'flex',  flexWrap: 'wrap'}}>
-                <Image id="hsimage" style={{ width: 100, height: 100 }} onClick={() => navigation.navigate('Aquarius')} useMap="#hsmap" ref={hsRef} source={require("../assets/Images/Horoscope/Aquarius.png")} />
-                <Image id="hsimage" style={{ width: 100, height: 100 }} onClick={() => navigation.navigate('Aquarius')} useMap="#hsmap" ref={hsRef} source={require("../assets/Images/Horoscope/Aries.png")} />
+                <Text style={ styles.hstext }>Daily Horoscope</Text>
+                <View style={ styles.hsstyle }>
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Aquarius.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Aries.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Cancer.png")} />
+                </View>
+                <View style={ styles.hsstyle }>
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Capricorn.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Gemini.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Leo.png")} />
+                </View>
+                <View style={ styles.hsstyle }>
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Libra.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Pisces.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Sagittarius.png")} />
+                </View>
+                <View style={ styles.hsstyle }>
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Scorpio.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Taurus.png")} />
+                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Virgo.png")} />
                 </View>
             {/* <map name="hsmap">
                 <area shape="circle" coords="570,570,130" alt="Aquarius" onClick={() => navigation.navigate('Aquarius')}></area>
