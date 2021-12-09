@@ -8,6 +8,7 @@ export default StyleSheet.create({
     /*       paddingTop: '200px', */
     fontSize: 30,
   },
+
   text: {
     fontFamily: 'RussoOne',
     fontSize: 30,
@@ -23,14 +24,17 @@ export default StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
   },
+
   background: {
     flex: 1,
     // blurRadius: 10,
     justifyContent: "center"
   },
+
   hsbackground: {
-    justifyContent:"center"
+    justifyContent: "center"
   },
+
   hstext: {
     fontFamily: 'RussoOne',
     fontSize: 30,
@@ -39,12 +43,14 @@ export default StyleSheet.create({
     opacity: 0.9,
     marginTop: 20,
   },
+
   hsstyle: {
     // flex: 1,
     flexWrap: 'wrap',
     justifyContent: 'center',
     flexDirection: 'row',
   },
+
   hsImage: {
     // flex: 1,
     // flexDirection: 'row',
@@ -66,33 +72,41 @@ export default StyleSheet.create({
   thumbnail: {
     width: 250,
     height: 250,
+    // borderColor: 'white',
+    // borderWidth: 1,
   },
+
   imageWrapper: {
     alignItems: 'center',
   },
+
   newsImage: {
     width: 350,
     height: 350,
     marginBottom: 10,
   },
+
   frontpageLogo: {
     height: 100,
     width: "auto",
     marginBottom: 30,
     marginTop: 80
   },
+
   frontpageButton: {
     height: 130,
     width: 280,
     alignContent: 'center',
     justifyContent: 'center',
   },
+
   frontpageContainer: {
     flex: 1,
     textAlign: 'center',
     justifyContent: 'center',
     fontSize: 30,
   },
+
   frontpagePressable: {
     flex: 1,
     fontFamily: 'RussoOne',
@@ -104,4 +118,32 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
 
+  newsContainer: {
+    flex: 1,
+    textAlign: 'center',
+    justifyContent: 'center',
+    marginTop: 80,
+    margin: 20,
+    
+  },
+
+  newsHeadline: {
+    flex: 1,
+    textAlign: 'center',
+    justifyContent: 'center',
+    fontSize: 20,
+    fontFamily: 'RussoOne',
+    color: 'white',
+    paddingTop: 20,
+    paddingBottom: 10,
+  },
+
+  newsSite: {
+    paddingBottom: 20,
+    paddingTop: 5,
+    color: 'white',
+    fontFamily: 'RussoOne',
+    fontSize: 15,
+    justifyContent: 'center',
+  },
 });
