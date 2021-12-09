@@ -3,6 +3,7 @@ import React from 'react';
 import Home from './components/Home';
 import Horoscope from './components/Horoscope';
 import Aquarius from './components/HoroscopePages/Aquarius';
+import Pisces from './components/HoroscopePages/Pisces'
 import Aries from './components/HoroscopePages/Aries';
 import Map from './components/Map';
 import Neptune from './components/Planets/Neptune';
@@ -69,6 +70,14 @@ export default function App() {
           }}
         />
         <Stack.Screen name="Aquarius" component={Aquarius}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: '#F1F1E6'
+          }}
+        />
+        <Stack.Screen name="Pisces" component={Pisces}
           options={{
             headerTitleStyle: {
               color: 'transparent',
