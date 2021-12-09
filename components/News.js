@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { View, Image, Text, ScrollView, Pressable } from 'react-native';
+import { View, Image, Text, ScrollView, Pressable, ImageBackground } from 'react-native';
 import styles from '../styles/styles';
 
-export default function News({navigation}) {
+export default function News({ navigation }) {
     const [item, setItem] = useState([]);
 
     useEffect(() => {
@@ -16,20 +16,29 @@ export default function News({navigation}) {
 
 
     return (
-        <View style={styles.container}>
-            <ScrollView>
-                {item.map(item => (
-                    <Pressable key={item.title} onPress={() => navigation.navigate('Details',{news:item})}>
-                    <View>
-                        <Text>{item.title}</Text>
-                        <View style={styles.imageWrapper}>
-                            <Image style={styles.thumbnail} source={{ uri: item.imageUrl, }} />
-                        </View>
-                        <Text>{item.newsSite}</Text>
-                    </View>
-                    </Pressable>
-                ))}
-            </ScrollView>
-        </View>
-    )
+        <ImageBackground source={require("../assets/Images/FrontpageBackground.png")} resizeMode="cover" style={styles.background}>
+
+            <View style={styles.newsContainer}>
+                <ScrollView>
+                    {item.map(item => (
+                        <Pressable key={item.title} onPress={() => navigation.navigate('Details', { news: item })}>
+                            <View>
+                                <Text style={styles.newsHeadline}>{item.title}</Text>
+                                <View style={styles.imageWrapper}>
+                                    <Image style={styles.thumbnail} source={{ uri: item.imageUrl, }} />
+                                </View>
+                                <Text style={styles.newsSite}>{item.newsSite}</Text>
+                            </View>
+                            <View
+                            style={{
+                                borderBottomColor: 'white',
+                                borderBottomWidth: 1,
+                              }}
+                            />
+                        </Pressable>
+                    ))}
+                </ScrollView>
+            </View>
+        </ImageBackground >
+    );
 }
