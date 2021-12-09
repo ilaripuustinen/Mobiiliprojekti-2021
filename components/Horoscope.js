@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Text, View, StyleSheet, ImageBackground, Image } from 'react-native';
+import { Text, View, StyleSheet, ImageBackground, Image, Pressable } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from '../styles/styles';
@@ -29,10 +29,16 @@ export default function Horoscope({ navigation }) {
                 <View style={{paddingTop: 25}}></View>
                 <Text style={ styles.hstext }>Daily Horoscope</Text>
                 <View style={{paddingBottom: 60}}></View>
-                <View style={ styles.hsstyle }>
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Aquarius.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/Horoscope/Pisces.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aries')} source={require("../assets/Images/Horoscope/Aries.png")} />
+                <View style={styles.hsstyle}>
+                    <Pressable onPress={() => navigation.navigate('Aquarius')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/Horoscope/Aquarius.png")} />
+                    </Pressable>
+                    <Pressable onPress={() => navigation.navigate('Pisces')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/Horoscope/Pisces.png")} />
+                    </Pressable>
+                    <Pressable onPress={() => navigation.navigate('Aries')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/Horoscope/Aries.png")} />
+                    </Pressable>
                     
                 </View>
                 <View style={ styles.hsstyle }>

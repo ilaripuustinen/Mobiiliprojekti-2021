@@ -29,7 +29,7 @@ export default function Aries() {
         <>
             {loading === false ? (   //latausruuta
                 <View>
-                    <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
+                    <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.hsbackground}>
                         <View style={{ alignSelf: 'center', marginTop: 100 }}>
                             <Image style={{width: 200, height: 200,}} source={ariesImage}></Image>
                         </View>
@@ -44,7 +44,7 @@ export default function Aries() {
             ) : (
                     <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
                         <View>
-                        <Text style={{ textAlign: 'center', color: 'white' }}>Loading</Text>
+                        <Text style={ styles.hstext }>Loading</Text>
                         </View>
                     </ImageBackground>
                     
