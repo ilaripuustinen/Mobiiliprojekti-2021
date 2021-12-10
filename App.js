@@ -5,6 +5,15 @@ import Horoscope from './components/Horoscope';
 import Aquarius from './components/HoroscopePages/Aquarius';
 import Pisces from './components/HoroscopePages/Pisces'
 import Aries from './components/HoroscopePages/Aries';
+import Taurus from './components/HoroscopePages/Taurus';
+import Gemini from './components/HoroscopePages/Gemini';
+import Cancer from './components/HoroscopePages/Cancer';
+import Leo from './components/HoroscopePages/Leo';
+import Virgo from './components/HoroscopePages/Virgo';
+import Libra from './components/HoroscopePages/Libra';
+import Scorpio from './components/HoroscopePages/Scorpio';
+import Sagittarius from './components/HoroscopePages/Sagittarius';
+import Capricorn from './components/HoroscopePages/Capricorn';
 import Map from './components/Map';
 import Neptune from './components/Planets/Neptune';
 import { useFonts } from 'expo-font';
@@ -77,22 +86,20 @@ export default function App() {
             headerTintColor: '#F1F1E6'
           }}
         />
-        <Stack.Screen name="Pisces" component={Pisces}
-          options={{
-            headerTitleStyle: {
-              color: 'transparent',
-            },
-            headerTintColor: '#F1F1E6'
-          }}
-        />
-        <Stack.Screen name="Aries" component={Aries}
-          options={{
-            headerTitleStyle: {
-              color: 'transparent',
-            },
-            headerTintColor: '#F1F1E6'
-          }}
-        />
+        <Stack.Screen name="Pisces" component={Pisces} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
+        <Stack.Screen name="Aries" component={Aries} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
+        <Stack.Screen name="Taurus" component={Taurus} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
+        <Stack.Screen name="Gemini" component={Gemini} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
+        <Stack.Screen name="Cancer" component={Cancer} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
+        <Stack.Screen name="Leo" component={Leo} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
+        <Stack.Screen name="Virgo" component={Virgo} options={{ headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
+        <Stack.Screen name="Libra" component={Libra} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Scorpio" component={Scorpio} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Sagittarius" component={Sagittarius} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Capricorn" component={Capricorn} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
+
+
+
         <Stack.Screen name="Map" component={Map}
           options={{
             headerTitleStyle: {

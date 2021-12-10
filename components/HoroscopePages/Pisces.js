@@ -29,7 +29,7 @@ export default function Pisces() {
         <>
             {loading === false ? (   //latausruuta
                 <View>
-                    <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.hsbackground}>
+                    <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
                         <View style={{ alignSelf: 'center', marginTop: 100 }}>
                             <Image style={{width: 200, height: 200,}} source={piscesImage}></Image>
                         </View>
@@ -42,7 +42,7 @@ export default function Pisces() {
                     </ImageBackground>
                 </View>
             ) : (
-                    <ImageBackground source={require("../../assets/HoroscopeBackground.png")} resizeMode="cover" style={styles.background}>
+                    <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.background}>
                         <View>
                         <Image style={ styles.loadingLogo } source={require("../../assets/logoilarille.png")}></Image>
                         <Text style={ styles.hstext }>Loading</Text>

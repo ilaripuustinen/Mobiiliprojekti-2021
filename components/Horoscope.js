@@ -41,23 +41,40 @@ export default function Horoscope({ navigation }) {
                     </Pressable>
                     
                 </View>
-                <View style={ styles.hsstyle }>
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/HoroscopeButtons/TaurusNappi.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/HoroscopeButtons/GeminiNappi.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/HoroscopeButtons/CancerNappi.png")} />
+                <View style={styles.hsstyle}>
+                    <Pressable onPress={() => navigation.navigate('Taurus')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/TaurusNappi.png")} />
+                    </Pressable>
+                    <Pressable onPress={() => navigation.navigate('Gemini')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/GeminiNappi.png")} />
+                    </Pressable>
+                    <Pressable onPress={() => navigation.navigate('Cancer')}>
+                        <Image style={ styles.hsImage } source={require("../assets/Images/HoroscopeButtons/CancerNappi.png")} />
+                    </Pressable>
+                </View>
+                <View style={styles.hsstyle}>
+                    <Pressable onPress={() => navigation.navigate('Leo')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/LeoNappi.png")} />
+                    </Pressable>
+                    <Pressable onPress={() => navigation.navigate('Virgo')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/VirgoNappi.png")} />
+                    </Pressable>
+                    <Pressable onPress={() => navigation.navigate('Libra')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/LibraNappi.png")} />
+                    </Pressable>
+                    
                     
                 </View>
-                <View style={ styles.hsstyle }>
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/HoroscopeButtons/LeoNappi.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/HoroscopeButtons/VirgoNappi.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/HoroscopeButtons/LibraNappi.png")} />
-                    
-                    
-                </View>
-                <View style={ styles.hsstyle }>
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/HoroscopeButtons/ScorpioNappi.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/HoroscopeButtons/SagittariusNappi.png")} />
-                    <Image style={ styles.hsImage } onClick={() => navigation.navigate('Aquarius')} source={require("../assets/Images/HoroscopeButtons/CapricornNappi.png")} />  
+                <View style={styles.hsstyle}>
+                    <Pressable onPress={() => navigation.navigate('Scorpio')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/ScorpioNappi.png")} />
+                    </Pressable>
+                    <Pressable onPress={() => navigation.navigate('Sagittarius')}>
+                    <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/SagittariusNappi.png")} />
+                    </Pressable>
+                    <Pressable onPress={() => navigation.navigate('Capricorn')}>
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/CapricornNappi.png")} /> 
+                    </Pressable>    
                 </View>
                 <View style={{paddingBottom: 200}}></View>
             {/* <map name="hsmap">
