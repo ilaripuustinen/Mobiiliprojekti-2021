@@ -18,13 +18,18 @@ export default function Map({ navigation }) {
     const [planetName6, setPlanetName6] = useState("");
     const [planetName7, setPlanetName7] = useState("");
     const [planetName8, setPlanetName8] = useState("");
-    const [height, setHeight] = useState("100");
+    const [neptuneSource, setNeptuneSource] = useState(require("../assets/Images/map/Neptune.png"));
+    const [uranusSource, setUranusSource] = useState(require("../assets/Images/map/Uranus.png"));
     /*     const [visible1, setVisible1] = useState(false); */
 
-    function onChange(isVisible) {
+    function onChangeNeptune(isVisible) {
         console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
-        isVisible ? setHeight("200") : setHeight("100");
+        isVisible ? setNeptuneSource(require("../assets/Images/map/NeptuneSelected.png")) : setNeptuneSource(require("../assets/Images/map/Neptune.png"))
+    }
 
+    function onChangeUranus(isVisible) {
+        console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
+        isVisible ? setUranusSource(require("../assets/Images/map/UranusSelected.png")) : setUranusSource(require("../assets/Images/map/Uranus.png"))
     }
 
 
@@ -52,24 +57,29 @@ export default function Map({ navigation }) {
             <View style={styles.container}>
 
              
-                    <ScrollView contentContainerStyle={{ alignItems: 'center',    alignSelf: 'stretch', }}>
-
+                    <ScrollView showsVerticalScrollIndicator={false} 
+                    contentContainerStyle={{ alignItems: 'center',    alignSelf: 'stretch', }}>
+                        
+                    <VisibilitySensor onChange={onChangeNeptune} offset={{ top: -20, bottom: 30 }} >
                         <TouchableOpacity onPress={() => navigation.navigate('Neptune')}>
-                            <Image source={require("../assets/Images/map/Neptune.png")} style={{
+                            <Image source={neptuneSource} style={{
                                 width: 120,
                                 height: 120,
                                 marginTop: 400
                             }} />
                         </TouchableOpacity>
-
+                        </VisibilitySensor>
+                        
+                        <VisibilitySensor onChange={onChangeUranus}>
                         <TouchableOpacity onPress={() => navigation.navigate('Neptune')}>
-                            <Image source={require("../assets/Images/map/Uranus.png")} style={{
+                            <Image source={uranusSource} style={{
                                 width: 120,
                                 height: 120,
                                 marginTop: 60,
                                 marginBottom: 20
                             }} />
                         </TouchableOpacity>
+                        </VisibilitySensor>
 
                         <TouchableOpacity onPress={() => navigation.navigate('Neptune')}>
                             <Image source={require("../assets/Images/map/Saturn.png")} style={{
@@ -119,9 +129,9 @@ export default function Map({ navigation }) {
                             }} />
                         </TouchableOpacity>
 
-                        <Image source={require("../assets/Images/map/Sun.png")} style={{
+                        <Image source={require("../assets/Images/map/Sun3.png")} style={{
                             width: 420,
-                            height: 400,
+                            height: 2500,
                             marginTop: 100,
                             position: "absolute",
                             bottom: 0
