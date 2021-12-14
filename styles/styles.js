@@ -130,18 +130,15 @@ export default StyleSheet.create({
     justifyContent: 'center',
     marginTop: 80,
     margin: 20,
-
   },
 
   newsHeadline: {
-    flex: 1,
-    textAlign: 'left',
-    justifyContent: 'center',
+    textAlign: 'center',
     fontSize: 20,
     fontFamily: 'RussoOne',
     color: '#F6F7FF',
-    paddingTop: 20,
-
+    padding: 20,
+   
   },
 
   newsSite: {
@@ -150,6 +147,6 @@ export default StyleSheet.create({
     color: '#BEBEBE',
     fontFamily: 'RussoOne',
     fontSize: 15,
-
+    // justifyContent: 'left',
   },
 });

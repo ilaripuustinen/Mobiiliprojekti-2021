@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {Text, View, Image} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Text, View, Image, ImageBackground } from 'react-native';
 import styles from '../styles/styles';
 
-export default function Details({route,navigation}) {
+export default function Details({ route, navigation }) {
     const [title, setTitle] = useState('');
     const [image, setImage] = useState('');
     const [description, setDescription] = useState('');
@@ -18,15 +18,17 @@ export default function Details({route,navigation}) {
     }, [route.params?.news])
 
     return (
-        <View style={styles.container}>
-            <Text>{title}</Text>
-            { image.length > 0 &&
-            <View style={styles.imageWrapper}>
-                <Image style={styles.newsImage} source={{uri: image,}}/>
+        <ImageBackground source={require("../assets/Images/NewsBackground.png")} resizeMode="cover" style={styles.background}>
+            <View style={styles.newsContainer}>
+                <Text style={styles.newsHeadline}>{title}</Text>
+                {image.length > 0 &&
+                    <View style={styles.imageWrapper}>
+                        <Image style={styles.newsImage} source={{ uri: image, }} />
+                    </View>
+                }
+                <Text style={styles.newsSite}>{description}</Text>
+                <Text style={styles.newsSite}>Source: {source}</Text>
             </View>
-            }
-            <Text>{description}</Text>
-            <Text>Source: {source}</Text>
-        </View>
+        </ImageBackground >
     )
 }
