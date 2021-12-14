@@ -130,7 +130,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     marginTop: 80,
     margin: 20,
-    
+
   },
 
   newsHeadline: {
@@ -141,7 +141,7 @@ export default StyleSheet.create({
     fontFamily: 'RussoOne',
     color: '#F6F7FF',
     paddingTop: 20,
-   
+
   },
 
   newsSite: {
@@ -150,6 +150,6 @@ export default StyleSheet.create({
     color: '#BEBEBE',
     fontFamily: 'RussoOne',
     fontSize: 15,
-    justifyContent: 'left',
+
   },
 });

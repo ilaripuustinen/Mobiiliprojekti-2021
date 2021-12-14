@@ -19,7 +19,7 @@ export default function News({ navigation }) {
         <ImageBackground source={require("../assets/Images/NewsBackground.png")} resizeMode="cover" style={styles.background}>
 
             <View style={styles.newsContainer}>
-                <ScrollView>
+                <ScrollView >
                     {item.map(item => (
                         <Pressable key={item.title} onPress={() => navigation.navigate('Details', { news: item })}>
                             <View style={{marginBottom: 30}}>

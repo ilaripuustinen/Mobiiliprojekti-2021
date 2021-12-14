@@ -15,11 +15,18 @@ import Scorpio from './components/HoroscopePages/Scorpio';
 import Sagittarius from './components/HoroscopePages/Sagittarius';
 import Capricorn from './components/HoroscopePages/Capricorn';
 import Map from './components/Map';
-import Neptune from './components/Planets/Neptune';
 import { useFonts } from 'expo-font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import News from './components/News';
 import Details from './components/Details';
+import Earth from './components/Planets/Earth';
+import Jupiter from './components/Planets/Jupiter';
+import Mars from './components/Planets/Mars';
+import Mercury from './components/Planets/Mercury';
+import Neptune from './components/Planets/Neptune';
+import Saturn from './components/Planets/Saturn';
+import Uranus from './components/Planets/Uranus';
+import Venus from './components/Planets/Venus';
 
 export default function App() {
 
@@ -98,7 +105,14 @@ export default function App() {
         <Stack.Screen name="Sagittarius" component={Sagittarius} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
         <Stack.Screen name="Capricorn" component={Capricorn} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
 
-
+        <Stack.Screen name="Neptune" component={Neptune} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
+        <Stack.Screen name="Uranus" component={Uranus} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
+        <Stack.Screen name="Saturn" component={Saturn} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
+        <Stack.Screen name="Jupiter" component={Jupiter} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
+        <Stack.Screen name="Mars" component={Mars} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
+        <Stack.Screen name="Earth" component={Earth} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
+        <Stack.Screen name="Venus" component={Venus} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
+        <Stack.Screen name="Mercury" component={Mercury} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
 
         <Stack.Screen name="Map" component={Map}
           options={{
@@ -108,14 +122,7 @@ export default function App() {
             headerTintColor: '#F1F1E6'
           }}
         />
-        <Stack.Screen name="Neptune" component={Neptune}
-          options={{
-            headerTitleStyle: {
-              color: 'transparent',
-            },
-            headerTintColor: '#F1F1E6'
-          }}
-        />
+
         <Stack.Screen name="News" component={News}
           options={{
             headerTitleStyle: {
