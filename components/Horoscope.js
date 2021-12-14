@@ -27,7 +27,7 @@ export default function Horoscope({ navigation }) {
         <View>
             <ImageBackground source={require("../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
                 <View style={{paddingTop: 25}}></View>
-                <Text style={ styles.hstext }>Daily Horoscope</Text>
+                <Text style={ styles.hsTitle }>Daily Horoscope</Text>
                 <View style={{paddingBottom: 60}}></View>
                 <View style={styles.hsstyle}>
                     <Pressable onPress={() => navigation.navigate('Aquarius')}>
