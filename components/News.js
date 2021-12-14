@@ -16,24 +16,22 @@ export default function News({ navigation }) {
 
 
     return (
-        <ImageBackground source={require("../assets/Images/FrontpageBackground.png")} resizeMode="cover" style={styles.background}>
+        <ImageBackground source={require("../assets/Images/NewsBackground.png")} resizeMode="cover" style={styles.background}>
 
             <View style={styles.newsContainer}>
                 <ScrollView>
                     {item.map(item => (
                         <Pressable key={item.title} onPress={() => navigation.navigate('Details', { news: item })}>
-                            <View>
-                                <Text style={styles.newsHeadline}>{item.title}</Text>
+                            <View style={{marginBottom: 30}}>
+                                
                                 <View style={styles.imageWrapper}>
                                     <Image style={styles.thumbnail} source={{ uri: item.imageUrl, }} />
                                 </View>
+                                <Text style={styles.newsHeadline}>{item.title}</Text>
                                 <Text style={styles.newsSite}>{item.newsSite}</Text>
                             </View>
                             <View
-                            style={{
-                                borderBottomColor: 'white',
-                                borderBottomWidth: 1,
-                              }}
+                           
                             />
                         </Pressable>
                     ))}

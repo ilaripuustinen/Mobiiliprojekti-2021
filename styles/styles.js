@@ -76,7 +76,7 @@ export default StyleSheet.create({
   },
 
   thumbnail: {
-    width: 250,
+    width: 410,
     height: 250,
     // borderColor: 'white',
     // borderWidth: 1,
@@ -135,21 +135,21 @@ export default StyleSheet.create({
 
   newsHeadline: {
     flex: 1,
-    textAlign: 'center',
+    textAlign: 'left',
     justifyContent: 'center',
     fontSize: 20,
     fontFamily: 'RussoOne',
-    color: 'white',
+    color: '#F6F7FF',
     paddingTop: 20,
-    paddingBottom: 10,
+   
   },
 
   newsSite: {
     paddingBottom: 20,
     paddingTop: 5,
-    color: 'white',
+    color: '#BEBEBE',
     fontFamily: 'RussoOne',
     fontSize: 15,
-    justifyContent: 'center',
+    justifyContent: 'left',
   },
 });
