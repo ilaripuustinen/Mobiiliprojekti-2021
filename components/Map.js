@@ -1,20 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, View, Image, ImageBackground, TouchableOpacity, Text, ScrollView, SafeAreaView, Dimensions , Pressable } from 'react-native';
-
-
+import { StyleSheet, View, Image, ImageBackground, TouchableOpacity, Text, ScrollView, SafeAreaView, Dimensions, Pressable } from 'react-native';
 
 
 export default function Map({ navigation }) {
-
-    const [planetName1, setPlanetName1] = useState("");
-    const [planetName2, setPlanetName2] = useState("");
-    const [planetName3, setPlanetName3] = useState("");
-    const [planetName4, setPlanetName4] = useState("");
-    const [planetName5, setPlanetName5] = useState("");
-    const [planetName6, setPlanetName6] = useState("");
-    const [planetName7, setPlanetName7] = useState("");
-    const [planetName8, setPlanetName8] = useState("");
-
 
 
     return (
@@ -22,96 +10,96 @@ export default function Map({ navigation }) {
 
             <View style={styles.container}>
 
-             
-                    <ScrollView keyboardShouldPersistTaps="always"
-                    contentContainerStyle={{ alignItems: 'center',    alignSelf: 'stretch', }}>
-                        
-         <Image source={require("../assets/Images/map/Sun4.png")} style={{
-                            width: 420,
-                            height: 430,
-                            marginTop: 100,
-                            position: "absolute",
-                            bottom: 0
-                        }}>
 
-                        </Image>
-                        <Pressable onPress={() => navigation.navigate('Neptune')}>
-                            <Image source={require("../assets/Images/map/NeptuneTeksti.png")} style={{
-                                width: 160,
-                                height: 160,
-                                marginTop: 200
-                            
-                            }} />
-                        </Pressable>
-            
-            
-                        <TouchableOpacity onPress={() => navigation.navigate('Uranus')}>
-                            <Image source={require("../assets/Images/map/UranusTeksti.png")} style={{
-                                width: 160,
-                                height: 160,
-                                marginTop: 60,
-                                marginBottom: 20
-                            }} />
-                        </TouchableOpacity>
-                  
+                <ScrollView keyboardShouldPersistTaps="always"
+                    contentContainerStyle={{ alignItems: 'center', alignSelf: 'stretch', }}>
 
-                        <TouchableOpacity onPress={() => navigation.navigate('Saturn')}>
-                            <Image source={require("../assets/Images/map/SaturnTeksti.png")} style={{
-                                width: 360,
-                                height: 230,
-                                maringTop: 80,
-                                marginTop: 20
+                    <Image source={require("../assets/Images/map/Sun4.png")} style={{
+                        width: 420,
+                        height: 430,
+                        marginTop: 100,
+                        position: "absolute",
+                        bottom: 0
+                    }}>
 
-                            }} />
-                        </TouchableOpacity>
+                    </Image>
+                    <Pressable onPress={() => navigation.navigate('Neptune')}>
+                        <Image source={require("../assets/Images/map/NeptuneTeksti.png")} style={{
+                            width: 160,
+                            height: 160,
+                            marginTop: 200
 
-                        <TouchableOpacity onPress={() => navigation.navigate('Jupiter')}>
-                            <Image source={require("../assets/Images/map/JupiterTeksti.png")} style={{
-                                width: 400,
-                                height: 400,
-                                marginTop: 40
-                            }} />
-                        </TouchableOpacity>
+                        }} />
+                    </Pressable>
 
-                        <TouchableOpacity onPress={() => navigation.navigate('Mars')}>
-                            <Image source={require("../assets/Images/map/MarsTeksti.png")} style={{
-                                width: 160,
-                                height: 160,
-                                marginTop: 60,
-                            }} />
-                        </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => navigation.navigate('Earth')}>
-                            <Image source={require("../assets/Images/map/EarthTeksti.png")} style={{
-                                width: 230,
-                                height: 230,
-                                marginTop: 60,
-                            }} />
-                        </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Uranus')}>
+                        <Image source={require("../assets/Images/map/UranusTeksti.png")} style={{
+                            width: 160,
+                            height: 160,
+                            marginTop: 60,
+                            marginBottom: 20
+                        }} />
+                    </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => navigation.navigate('Venus')}>
-                            <Image source={require("../assets/Images/map/VenusTeksti.png")} style={{
-                                width: 230,
-                                height: 230,
-                                marginTop: 40,
-                            }} />
-                        </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => navigation.navigate('Mercury')}>
-                            <Image source={require("../assets/Images/map/MercuryTeksti.png")} style={{
-                                width: 160,
-                                height: 160,
-                                marginTop: 40,
-                                marginBottom: 250
-                            }} />
-                        </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Saturn')}>
+                        <Image source={require("../assets/Images/map/SaturnTeksti.png")} style={{
+                            width: 360,
+                            height: 230,
+                            maringTop: 80,
+                            marginTop: 20
 
-                        
-                    </ScrollView>
+                        }} />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('Jupiter')}>
+                        <Image source={require("../assets/Images/map/JupiterTeksti.png")} style={{
+                            width: 400,
+                            height: 400,
+                            marginTop: 40
+                        }} />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('Mars')}>
+                        <Image source={require("../assets/Images/map/MarsTeksti.png")} style={{
+                            width: 160,
+                            height: 160,
+                            marginTop: 60,
+                        }} />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('Earth')}>
+                        <Image source={require("../assets/Images/map/EarthTeksti.png")} style={{
+                            width: 230,
+                            height: 230,
+                            marginTop: 60,
+                        }} />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('Venus')}>
+                        <Image source={require("../assets/Images/map/VenusTeksti.png")} style={{
+                            width: 230,
+                            height: 230,
+                            marginTop: 40,
+                        }} />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('Mercury')}>
+                        <Image source={require("../assets/Images/map/MercuryTeksti.png")} style={{
+                            width: 160,
+                            height: 160,
+                            marginTop: 40,
+                            marginBottom: 250
+                        }} />
+                    </TouchableOpacity>
+
+
+                </ScrollView>
 
             </View>
         </ImageBackground>
-);
+    );
 
 
 }

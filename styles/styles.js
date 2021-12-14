@@ -100,6 +100,7 @@ export default StyleSheet.create({
   },
 
   frontpageButton: {
+
     height: 130,
     width: 280,
     alignContent: 'center',
@@ -114,13 +115,12 @@ export default StyleSheet.create({
   },
 
   frontpagePressable: {
+    paddingBottom: 120,
     flex: 1,
     fontFamily: 'RussoOne',
     fontSize: 30,
     color: '#DD2A2A',
-    padding: 5,
-    marginTop: 30,
-    marginBottom: 10,
+    marginTop: 20,
     alignItems: 'center',
   },
 
