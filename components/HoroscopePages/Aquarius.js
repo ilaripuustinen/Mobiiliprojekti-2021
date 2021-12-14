@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react'
-import { Text, View, ImageBackground, Image } from 'react-native'
+import { Text, View, ImageBackground, Image, ScrollView } from 'react-native'
 import aquariusImage from "../../assets/Images/Horoscope/Aquarius.png"
 import styles from '../../styles/styles';
 
@@ -28,7 +28,7 @@ export default function Aquarius() {
     return (
         <>
             {loading === false ? (   //latausruuta
-                <View>
+                <ScrollView>
                     <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
                         <View style={{ alignSelf: 'center', marginTop: 100 }}>
                             <Image style={{width: 200, height: 200,}} source={aquariusImage}></Image>
@@ -40,7 +40,7 @@ export default function Aquarius() {
                         <View style={{ paddingBottom: 200 }}>
                         </View>
                     </ImageBackground>
-                </View>
+                </ScrollView>
             ) : (
                     <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.background}>
                         <View>
