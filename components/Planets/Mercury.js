@@ -5,6 +5,7 @@ import styles from '../../styles/styles';
 export default function Mercury() {
 
   const [planet, setPlanet] = useState([]);
+  const [moons, setMoons] = useState('');
 
   useEffect(() => {
     fetch('https://api.le-systeme-solaire.net/rest/bodies?filter[]=id,eq,mercure')
@@ -16,6 +17,8 @@ export default function Mercury() {
           if (element.isPlanet && element.name.startsWith('(') === false) {
             console.log(element.name);
             temp.push(element)
+          } if (element.moons == null) {
+            setMoons(0)
           }
         });
         setPlanet(temp);
@@ -44,9 +47,9 @@ export default function Mercury() {
       {planet.map(planet => (
         <Text>Axial tilt: {planet.axialTilt}°</Text>
       ))}
-      {planet.map(planet => (
-        <Text>Number of moons: {planet.moons.length}</Text>
-      ))}
+
+      <Text>Number of moons: {moons}</Text>
+
     </View>
 
   )

@@ -6,6 +6,7 @@ export default function Venus() {
 
  
   const [planet, setPlanet] = useState([]);
+  const [moons, setMoons] = useState('');
 
   useEffect(() => {
     fetch('https://api.le-systeme-solaire.net/rest/bodies?filter[]=id,eq,venus')
@@ -17,6 +18,8 @@ export default function Venus() {
           if (element.isPlanet && element.name.startsWith('(') === false) {
             console.log(element.name);
             temp.push(element)
+          } if (element.moons == null) {
+            setMoons(0)
           }
         });
         setPlanet(temp);
@@ -45,9 +48,9 @@ export default function Venus() {
       {planet.map(planet => (
         <Text>Axial tilt: {planet.axialTilt}°</Text>
       ))}
-      {planet.map(planet => (
-        <Text>Number of moons: {planet.moons.length}</Text>
-      ))}
+      
+        <Text>Number of moons: {moons}</Text>
+     
     </View>
 
   )
