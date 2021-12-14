@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Text, View, StyleSheet, ImageBackground, Image, Pressable } from 'react-native';
+import { Text, View, StyleSheet, ImageBackground, Image, Pressable, ScrollView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from '../styles/styles';
@@ -24,7 +24,7 @@ export default function Horoscope({ navigation }) {
     // var imageMapResizer = require("image-map-resizer")
 
     return (
-        <View>
+        <ScrollView>
             <ImageBackground source={require("../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
                 <View style={{paddingTop: 25}}></View>
                 <Text style={ styles.hsTitle }>Daily Horoscope</Text>
@@ -76,13 +76,13 @@ export default function Horoscope({ navigation }) {
                         <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/CapricornNappi.png")} /> 
                     </Pressable>    
                 </View>
-                <View style={{paddingBottom: 200}}></View>
+                <View style={{paddingBottom: 150}}></View>
             {/* <map name="hsmap">
                 <area shape="circle" coords="570,570,130" alt="Aquarius" onClick={() => navigation.navigate('Aquarius')}></area>
             </map> */}
             {/* <View style={{paddingBottom: 200}}></View> */}
         </ImageBackground>
-        </View>
+        </ScrollView>
         
     )
 }
