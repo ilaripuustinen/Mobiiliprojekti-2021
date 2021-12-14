@@ -30,6 +30,11 @@ export default function News({ navigation }) {
                                 <Text style={styles.newsHeadline}>{item.title}</Text>
                                 <Text style={styles.newsSite}>{item.newsSite}</Text>
                             </View>
+                            {/* <View style={{
+                                borderBottomColor: '#98023a', 
+                                borderBottomWidth: 2,
+                                marginBottom: 40,
+                                }}/> */}
                             <View
                            
                             />

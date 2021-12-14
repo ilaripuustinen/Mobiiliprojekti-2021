@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, View, Image, ImageBackground, TouchableOpacity, Text, ScrollView, SafeAreaView, Dimensions  } from 'react-native';
-import VisibilitySensor from '@svanboxel/visibility-sensor-react-native'
+import VisibilitySensor from '@svanboxel/visibility-sensor-react-native';
 
 /* import FadeInOut from 'react-native-fade-in-out'; */
 
