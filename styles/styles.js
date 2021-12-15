@@ -164,15 +164,19 @@ export default StyleSheet.create({
   planetTitle: {
     fontFamily: 'RussoOne',
     fontSize: 40,
-    color: '#ECECEC',
-    /*  backgroundColor: '#16131D', */
-    padding: 5,
+  color: '#C5DDFF',
     marginTop: 10,
-    marginBottom: 10,
-    borderBottomEndRadius: 20,
-    borderBottomLeftRadius: 20,
-    borderTopRightRadius: 20,
-    borderTopStartRadius: 20,
+    alignContent: 'center',
+    alignItems: 'center',
+  },
+
+  
+
+  planetSecondTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 25,
+    color: '#4A71AA',
+    marginBottom: 40,
     alignContent: 'center',
     alignItems: 'center',
   },
@@ -180,21 +184,21 @@ export default StyleSheet.create({
   planetText: {
     fontFamily: 'RussoOne',
     fontSize: 20,
-    color: '#477DB4',
+    color: '#4A71AA',
     padding: 5,
     marginTop: 10,
     marginBottom: 10,
     flex: 1,
-    textAlign: 'right'
+    textAlign: 'left',
   },
 
-  planetInfo: {
-
+  planetData: {
+    width: 90,
     fontSize: 15,
     color: '#BABABA',
-    paddingTop: 5,
+    paddingTop: 10,
     paddingBottom: 10,
-    marginTop: 10,
+    marginTop: 15,
     marginBottom: 10,
     alignItems: 'center',
     textAlign: 'left'
