@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View, Image, FlatList } from 'react-native';
+import { Text, View, Image, ImageBackground } from 'react-native';
 import styles from '../../styles/styles';
 
 export default function Earth() {
@@ -25,30 +25,89 @@ export default function Earth() {
   }, []);
 
   return (
+    <ImageBackground source={require("../../assets/Images/PlanetBackground.png")} resizeMode="cover" style={styles.background}>
+      <View style={styles.planetContainer}>
 
-    <View style={styles.container}>
+        <Text style={styles.planetTitle}>Earth</Text>
+        <Text style={styles.planetSecondTitle}>The Blue Planet</Text>
+        <Image source={require("../../assets/Images/planets/Earth.png")}
+          style={{ height: 250, width: 250, marginBottom: 30 }} />
 
-      <Text>Earth</Text>
 
-      {planet.map(planet => (
-        <Text>Semimajor Axis: {planet.semimajorAxis} km</Text>
-      ))}
-      {planet.map(planet => (
-        <Text>Mean radius: {planet.meanRadius} km</Text>
-      ))}
-      {planet.map(planet => (
-        <Text>Gravity: {planet.gravity} m.s-2</Text>
-      ))}
-      {planet.map(planet => (
-        <Text>Mass: {planet.mass.massValue} 10nkg</Text>
-      ))}
-      {planet.map(planet => (
-        <Text>Axial tilt: {planet.axialTilt}°</Text>
-      ))}
-      {planet.map(planet => (
-        <Text>Number of moons: {planet.moons.length}</Text>
-      ))}
-    </View>
+        <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: 'row' }}>
+   
+              <View style={{ width: 120, textAlign: 'right', marginLeft:30 }}>
+                <Text style={styles.planetText}>Mass {"\n"}
+                  {planet.map(planet => (
+                    <Text style={styles.planetData}>{(planet.mass.massValue).toFixed(2)} 10nkg</Text>
+                  ))}</Text>
+              </View>
 
+
+          
+
+            <View style={{ width: 220, textAlign: 'left', height: 80 }}>
+              <Text style={styles.planetText}>Semimajor Axis {"\n"}
+                {planet.map(planet => (
+                  <Text style={styles.planetData}>{(planet.semimajorAxis / 1000000).toFixed(1)} Gm</Text>
+                ))}
+              </Text>
+            </View>
+
+          </View>
+        </View>
+
+        <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: 'row' }}>
+
+            <View style={{ width: 120, textAlign: 'left', height: 80, marginLeft:30 }}>
+              <Text style={styles.planetText}>Gravity {"\n"}
+                {planet.map(planet => (
+                  <Text style={styles.planetData}>{(planet.gravity)} m.s-2</Text>
+                ))}
+              </Text>
+            </View>
+
+          </View>
+
+          <View style={{ flexDirection: 'row' }}>
+            <View style={{ width: 220, textAlign: 'right' }}>
+              <Text style={styles.planetText}>Mean Radius {"\n"}
+                {planet.map(planet => (
+                  <Text style={styles.planetData}>{planet.meanRadius} Km</Text>
+                ))}</Text>
+            </View>
+
+
+          </View>
+        </View>
+
+        <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: 'row' }}>
+
+            <View style={{ width: 120, textAlign: 'left', height: 80, marginLeft:30 }}>
+              <Text style={styles.planetText}>Obliquity {"\n"}
+                {planet.map(planet => (
+                  <Text style={styles.planetData}>{planet.axialTilt} °</Text>
+                ))}
+              </Text>
+            </View>
+
+          </View>
+          <View style={{ flexDirection: 'row' }}>
+
+            <View style={{ width: 220, textAlign: 'right' }}>
+              <Text style={styles.planetText}>Number Of Moons {"\n"}
+                {planet.map(planet => (
+                  <Text style={styles.planetData}>{planet.moons.length} kpl</Text>
+                ))}</Text>
+            </View>
+
+          </View>
+        </View>
+
+      </View>
+    </ImageBackground>
   )
-  };
+};
