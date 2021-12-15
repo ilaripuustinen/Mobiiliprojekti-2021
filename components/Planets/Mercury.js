@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View, Image, FlatList } from 'react-native';
+import { Text, View, Image, ImageBackground } from 'react-native';
 import styles from '../../styles/styles';
 
 export default function Mercury() {
@@ -27,30 +27,72 @@ export default function Mercury() {
   }, []);
 
   return (
+    <ImageBackground source={require("../../assets/Images/PlanetBackground.png")} resizeMode="cover" style={styles.background}>
+      <View style={styles.planetContainer}>
 
-    <View style={styles.container}>
+        <Text style={styles.planetTitle}>Mercury</Text>
+        <Image source={require("../../assets/Images/planets/Mercury.png")}
+          style={{ height: 250, width: 250, marginBottom: 30 }} />
 
-      <Text>Mercury</Text>
+        <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: 'row' }}>
+            <View style={{ width: 107, textAlign: 'right' }}>
+              <Text style={styles.planetText}>Axis:</Text>
+            </View>
+            {planet.map(planet => (
+              <Text style={styles.planetInfo}>{(planet.semimajorAxis / 1000000).toFixed(1)} Gm</Text>
+            ))}
+          </View>
+          <View style={{ flexDirection: 'row' }}>
+            <View style={{ width: 107, textAlign: 'right' }}>
+              <Text style={styles.planetText}>Radius:</Text>
+            </View>
+            {planet.map(planet => (
+              <Text style={styles.planetInfo}>{planet.meanRadius} Km</Text>
+            ))}
+          </View>
+        </View>
 
-      {planet.map(planet => (
-        <Text>Semimajor Axis: {planet.semimajorAxis} km</Text>
-      ))}
-      {planet.map(planet => (
-        <Text>Mean radius: {planet.meanRadius} km</Text>
-      ))}
-      {planet.map(planet => (
-        <Text>Gravity: {planet.gravity} m.s-2</Text>
-      ))}
-      {planet.map(planet => (
-        <Text>Mass: {planet.mass.massValue} 10nkg</Text>
-      ))}
-      {planet.map(planet => (
-        <Text>Axial tilt: {planet.axialTilt}°</Text>
-      ))}
+        <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: 'row' }}>
+            <View style={{ width: 107, textAlign: 'right' }}>
+              <Text style={styles.planetText}>Gravity:</Text>
+            </View>
+            {planet.map(planet => (
+              <Text style={styles.planetInfo}>{(planet.gravity)} m.s-2</Text>
+            ))}
+          </View>
+          <View style={{ flexDirection: 'row' }}>
+            <View style={{ width: 90, textAlign: 'right' }}>
+              <Text style={styles.planetText}>Mass:</Text>
+            </View>
+            {planet.map(planet => (
+              <Text style={styles.planetInfo}>{(planet.mass.massValue).toFixed(2)} 10nkg</Text>
+            ))}
+          </View>
+        </View>
 
-      <Text>Number of moons: {moons}</Text>
+        <View style={{ flexDirection: 'row' }}>
+          <View style={{ flexDirection: 'row' }}>
+            <View style={{ width: 120, textAlign: 'right' }}>
+              <Text style={styles.planetText}>Obliquity:</Text>
+            </View>
+            {planet.map(planet => (
+              <Text style={styles.planetInfo}>{planet.axialTilt} °</Text>
+            ))}
+          </View>
+          <View style={{ flexDirection: 'row' }}>
+            <View style={{ width: 100, textAlign: 'right', marginLeft: 24 }}>
+              <Text style={styles.planetText}>Moons: </Text>
+            </View>
+            {planet.map(planet => (
+              <Text style={styles.planetInfo}>None</Text>
+            ))}
+          </View>
+        </View>
 
-    </View>
 
+      </View>
+    </ImageBackground>
   )
-  };
+};

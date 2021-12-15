@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react'
-import { Text, View, ImageBackground, Image } from 'react-native'
+import { Text, View, ImageBackground, Image, ScrollView } from 'react-native'
 import geminiImage from "../../assets/Images/Horoscope/Gemini.png"
 import styles from '../../styles/styles';
 
@@ -28,19 +28,19 @@ export default function Gemini() {
     return (
         <>
             {loading === false ? (   //latausruuta
-                <View>
-                    <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
-                        <View style={{ alignSelf: 'center', marginTop: 100 }}>
-                            <Image style={{width: 200, height: 200,}} source={geminiImage}></Image>
+                <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
+                    <ScrollView>
+                        <View style={{ alignSelf: 'center', marginTop: 90 }}>
+                            <Image style={{ width: 180, height: 180, }} source={geminiImage}></Image>
                         </View>
                         <View>
-                            <Text style={ styles.hstext }>Gemini</Text>
+                            <Text style={styles.hstext}>Gemini</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
-                        <View style={{ paddingBottom: 200 }}>
+                        <View style={{ paddingBottom: 150 }}>
                         </View>
-                    </ImageBackground>
-                </View>
+                    </ScrollView>
+                </ImageBackground>
             ) : (
                     <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.background}>
                         <View>

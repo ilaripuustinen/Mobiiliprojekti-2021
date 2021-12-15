@@ -26,9 +26,9 @@ export default function Horoscope({ navigation }) {
     return (
         <ScrollView>
             <ImageBackground source={require("../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
-                <View style={{paddingTop: 25}}></View>
+                {/* <View style={{paddingTop: 25}}></View> */}
                 <Text style={ styles.hsTitle }>Daily Horoscope</Text>
-                <View style={{paddingBottom: 60}}></View>
+                <View style={{paddingBottom: 40}}></View>
                 <View style={styles.hsstyle}>
                     <Pressable onPress={() => navigation.navigate('Aquarius')}>
                         <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/AquariusNappi.png")} />
