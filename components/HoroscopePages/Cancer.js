@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react'
 import { Text, View, ImageBackground, Image, ScrollView } from 'react-native'
-import cancerImage from "../../assets/Images/Horoscope/Cancer.png"
+import cancerImage from "../../assets/Images/Horoscope/CancerPicture.png"
 import styles from '../../styles/styles';
 
 export default function Cancer() {
@@ -30,11 +30,11 @@ export default function Cancer() {
             {loading === false ? (   //latausruuta
                 <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
                     <ScrollView>
-                        <View style={{ alignSelf: 'center', marginTop: 80 }}>
-                            <Image style={{ width: 180, height: 180, }} source={cancerImage}></Image>
+                        <View style={{ alignSelf: 'center', marginTop: 40 }}>
+                            <Image style={{ width: 350, height: 350, }} source={cancerImage}></Image>
                         </View>
                         <View>
-                            <Text style={styles.hstext}>Cancer</Text>
+                            <Text style={styles.horoTitle}>Cancer</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
                         <View style={{ paddingBottom: 50 }}>

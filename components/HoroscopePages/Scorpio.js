@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react'
 import { Text, View, ImageBackground, Image, ScrollView } from 'react-native'
-import scorpioImage from "../../assets/Images/Horoscope/Scorpio.png"
+import scorpioImage from "../../assets/Images/Horoscope/ScorpioPicture.png"
 import styles from '../../styles/styles';
 
 export default function Scorpio() {
@@ -30,11 +30,11 @@ export default function Scorpio() {
             {loading === false ? (   //latausruuta
                 <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
                     <ScrollView>
-                        <View style={{ alignSelf: 'center', marginTop: 90 }}>
-                            <Image style={{ width: 180, height: 180, }} source={scorpioImage}></Image>
+                        <View style={{ alignSelf: 'center', marginTop: 40 }}>
+                            <Image style={{ width: 350, height: 350, }} source={scorpioImage}></Image>
                         </View>
                         <View>
-                            <Text style={styles.hstext}>Scorpio</Text>
+                            <Text style={styles.horoTitle}>Scorpio</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
                         <View style={{ paddingBottom: 50 }}>

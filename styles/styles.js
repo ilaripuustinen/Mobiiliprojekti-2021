@@ -38,7 +38,6 @@ export default StyleSheet.create({
   },
 
   hstext: {
-    fontFamily: 'RussoOne',
     fontSize: 18,
     color: 'white',
     textAlign: 'center',
@@ -55,6 +54,15 @@ export default StyleSheet.create({
     marginTop: 44,
     marginRight: 15,
     marginLeft: 15,
+  },
+
+  horoTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 40,
+    color: 'white',
+    textAlign: 'center',
+    opacity: 0.9,
+    marginBottom: 20
   },
 
   hsstyle: {

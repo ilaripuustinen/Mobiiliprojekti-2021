@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react'
 import { Text, View, ImageBackground, Image, ScrollView } from 'react-native'
-import ariesImage from "../../assets/Images/Horoscope/Aries.png"
+import ariesImage from "../../assets/Images/Horoscope/AriesPicture.png"
 import styles from '../../styles/styles';
 
 export default function Aries() {
@@ -30,11 +30,11 @@ export default function Aries() {
             {loading === false ? (   //latausruuta
                 <ImageBackground source={require("../../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
                     <ScrollView>
-                        <View style={{ alignSelf: 'center', marginTop: 90 }}>
-                            <Image style={{ width: 180, height: 180, }} source={ariesImage}></Image>
+                        <View style={{ alignSelf: 'center', marginTop: 40 }}>
+                            <Image style={{ width: 350, height: 350, }} source={ariesImage}></Image>
                         </View>
                         <View>
-                            <Text style={styles.hstext}>Aries</Text>
+                            <Text style={styles.horoTitle}>Aries</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
                         <View style={{ paddingBottom: 50 }}>
