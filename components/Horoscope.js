@@ -24,11 +24,11 @@ export default function Horoscope({ navigation }) {
     // var imageMapResizer = require("image-map-resizer")
 
     return (
-        <ScrollView>
-            <ImageBackground source={require("../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
+        <ImageBackground source={require("../assets/HoroBackground.png")} resizeMode="cover" style={styles.hsbackground}>
+            <ScrollView>
                 {/* <View style={{paddingTop: 25}}></View> */}
-                <Text style={ styles.hsTitle }>Daily Horoscope</Text>
-                <View style={{paddingBottom: 40}}></View>
+                <Text style={styles.hsTitle}>Daily Horoscope</Text>
+                <View style={{ paddingBottom: 40 }}></View>
                 <View style={styles.hsstyle}>
                     <Pressable onPress={() => navigation.navigate('Aquarius')}>
                         <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/AquariusNappi.png")} />
@@ -39,7 +39,7 @@ export default function Horoscope({ navigation }) {
                     <Pressable onPress={() => navigation.navigate('Aries')}>
                         <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/AriesNappi.png")} />
                     </Pressable>
-                    
+
                 </View>
                 <View style={styles.hsstyle}>
                     <Pressable onPress={() => navigation.navigate('Taurus')}>
@@ -49,7 +49,7 @@ export default function Horoscope({ navigation }) {
                         <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/GeminiNappi.png")} />
                     </Pressable>
                     <Pressable onPress={() => navigation.navigate('Cancer')}>
-                        <Image style={ styles.hsImage } source={require("../assets/Images/HoroscopeButtons/CancerNappi.png")} />
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/CancerNappi.png")} />
                     </Pressable>
                 </View>
                 <View style={styles.hsstyle}>
@@ -62,27 +62,27 @@ export default function Horoscope({ navigation }) {
                     <Pressable onPress={() => navigation.navigate('Libra')}>
                         <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/LibraNappi.png")} />
                     </Pressable>
-                    
-                    
+
+
                 </View>
                 <View style={styles.hsstyle}>
                     <Pressable onPress={() => navigation.navigate('Scorpio')}>
                         <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/ScorpioNappi.png")} />
                     </Pressable>
                     <Pressable onPress={() => navigation.navigate('Sagittarius')}>
-                    <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/SagittariusNappi.png")} />
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/SagittariusNappi.png")} />
                     </Pressable>
                     <Pressable onPress={() => navigation.navigate('Capricorn')}>
-                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/CapricornNappi.png")} /> 
-                    </Pressable>    
+                        <Image style={styles.hsImage} source={require("../assets/Images/HoroscopeButtons/CapricornNappi.png")} />
+                    </Pressable>
                 </View>
-                <View style={{paddingBottom: 150}}></View>
-            {/* <map name="hsmap">
+                {/* <View style={{ paddingBottom: 150 }}></View> */}
+                {/* <map name="hsmap">
                 <area shape="circle" coords="570,570,130" alt="Aquarius" onClick={() => navigation.navigate('Aquarius')}></area>
             </map> */}
-            {/* <View style={{paddingBottom: 200}}></View> */}
+                {/* <View style={{paddingBottom: 200}}></View> */}
+            </ScrollView>
         </ImageBackground>
-        </ScrollView>
-        
+
     )
 }

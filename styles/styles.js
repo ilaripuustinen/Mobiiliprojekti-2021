@@ -33,6 +33,7 @@ export default StyleSheet.create({
   },
 
   hsbackground: {
+    flex: 1,
     justifyContent: "center"
   },
 
