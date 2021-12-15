@@ -37,7 +37,7 @@ export default function Scorpio() {
                             <Text style={styles.hstext}>Scorpio</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
-                        <View style={{ paddingBottom: 150 }}>
+                        <View style={{ paddingBottom: 50 }}>
                         </View>
                     </ScrollView>
                 </ImageBackground>

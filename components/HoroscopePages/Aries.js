@@ -37,7 +37,7 @@ export default function Aries() {
                             <Text style={styles.hstext}>Aries</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
-                        <View style={{ paddingBottom: 150 }}>
+                        <View style={{ paddingBottom: 50 }}>
                         </View>
                     </ScrollView>
                 </ImageBackground>

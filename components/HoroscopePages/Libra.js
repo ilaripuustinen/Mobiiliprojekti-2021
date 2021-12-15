@@ -37,7 +37,7 @@ export default function Libra() {
                             <Text style={styles.hstext}>Libra</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
-                        <View style={{ paddingBottom: 150 }}>
+                        <View style={{ paddingBottom: 50 }}>
                         </View>
                     </ScrollView>
                 </ImageBackground>
