@@ -27,70 +27,71 @@ export default function Mercury() {
   }, []);
 
   return (
-    <ImageBackground source={require("../../assets/Images/PlanetBackground.png")} resizeMode="cover" style={styles.background}>
+    <ImageBackground source={require("../../assets/Images/MercuryBackground.png")} resizeMode="cover" style={styles.background}>
       <View style={styles.planetContainer}>
 
-        <Text style={styles.planetTitle}>Mercury</Text>
+        <Text style={styles.planetMercuryTitle}>Mercury</Text>
+        <Text style={styles.planetMercurySecondTitle}>The Innermost Planet</Text>
         <Image source={require("../../assets/Images/planets/Mercury.png")}
           style={{ height: 250, width: 250, marginBottom: 30 }} />
 
+
         <View style={{ flexDirection: 'row' }}>
           <View style={{ flexDirection: 'row' }}>
-            <View style={{ width: 107, textAlign: 'right' }}>
-              <Text style={styles.planetText}>Axis:</Text>
+
+            <View style={{ width: 120, textAlign: 'right', marginLeft: 30 }}>
+              <Text style={styles.planetMercuryText}>Mass {"\n"}
+                {planet.map(planet => (
+                  <Text style={styles.planetData}>{(planet.mass.massValue).toFixed(2)} 10nkg</Text>
+                ))}</Text>
             </View>
-            {planet.map(planet => (
-              <Text style={styles.planetInfo}>{(planet.semimajorAxis / 1000000).toFixed(1)} Gm</Text>
-            ))}
-          </View>
-          <View style={{ flexDirection: 'row' }}>
-            <View style={{ width: 107, textAlign: 'right' }}>
-              <Text style={styles.planetText}>Radius:</Text>
+
+
+
+
+            <View style={{ width: 220, textAlign: 'left', height: 80 }}>
+              <Text style={styles.planetMercuryText}>Semimajor Axis {"\n"}
+                {planet.map(planet => (
+                  <Text style={styles.planetData}>{(planet.semimajorAxis / 1000000).toFixed(1)} Gm</Text>
+                ))}
+              </Text>
             </View>
-            {planet.map(planet => (
-              <Text style={styles.planetInfo}>{planet.meanRadius} Km</Text>
-            ))}
+
           </View>
         </View>
 
         <View style={{ flexDirection: 'row' }}>
           <View style={{ flexDirection: 'row' }}>
-            <View style={{ width: 107, textAlign: 'right' }}>
-              <Text style={styles.planetText}>Gravity:</Text>
+
+            <View style={{ width: 120, textAlign: 'left', height: 80, marginLeft: 30 }}>
+              <Text style={styles.planetMercuryText}>Gravity {"\n"}
+                {planet.map(planet => (
+                  <Text style={styles.planetData}>{(planet.gravity)} m.s-2</Text>
+                ))}
+              </Text>
             </View>
-            {planet.map(planet => (
-              <Text style={styles.planetInfo}>{(planet.gravity)} m.s-2</Text>
-            ))}
+
           </View>
+
           <View style={{ flexDirection: 'row' }}>
-            <View style={{ width: 90, textAlign: 'right' }}>
-              <Text style={styles.planetText}>Mass:</Text>
+            <View style={{ width: 220, textAlign: 'right' }}>
+              <Text style={styles.planetMercuryText}>Mean Radius {"\n"}
+                {planet.map(planet => (
+                  <Text style={styles.planetData}>{planet.meanRadius} Km</Text>
+                ))}</Text>
             </View>
-            {planet.map(planet => (
-              <Text style={styles.planetInfo}>{(planet.mass.massValue).toFixed(2)} 10nkg</Text>
-            ))}
           </View>
         </View>
 
-        <View style={{ flexDirection: 'row' }}>
-          <View style={{ flexDirection: 'row' }}>
-            <View style={{ width: 120, textAlign: 'right' }}>
-              <Text style={styles.planetText}>Obliquity:</Text>
-            </View>
-            {planet.map(planet => (
-              <Text style={styles.planetInfo}>{planet.axialTilt} °</Text>
-            ))}
-          </View>
-          <View style={{ flexDirection: 'row' }}>
-            <View style={{ width: 100, textAlign: 'right', marginLeft: 24 }}>
-              <Text style={styles.planetText}>Moons: </Text>
-            </View>
-            {planet.map(planet => (
-              <Text style={styles.planetInfo}>None</Text>
-            ))}
-          </View>
-        </View>
 
+
+        <View style={{ width: 120, textAlign: 'left', height: 80, marginLeft: 30 }}>
+          <Text style={styles.planetMercuryText}>Obliquity {"\n"}
+            {planet.map(planet => (
+              <Text style={styles.planetData}>{planet.axialTilt} °</Text>
+            ))}
+          </Text>
+        </View>
 
       </View>
     </ImageBackground>

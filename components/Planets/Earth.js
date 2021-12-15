@@ -25,11 +25,11 @@ export default function Earth() {
   }, []);
 
   return (
-    <ImageBackground source={require("../../assets/Images/PlanetBackground.png")} resizeMode="cover" style={styles.background}>
+    <ImageBackground source={require("../../assets/Images/EarthBackground.png")} resizeMode="cover" style={styles.background}>
       <View style={styles.planetContainer}>
 
         <Text style={styles.planetTitle}>Earth</Text>
-        <Text style={styles.planetSecondTitle}>The Blue Planet</Text>
+        <Text style={styles.planetSecondTitle}>the Blue Planet</Text>
         <Image source={require("../../assets/Images/planets/Earth.png")}
           style={{ height: 250, width: 250, marginBottom: 30 }} />
 

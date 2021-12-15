@@ -28,8 +28,8 @@ export default function Uranus() {
     <ImageBackground source={require("../../assets/Images/UranusBackground.png")} resizeMode="cover" style={styles.background}>
       <View style={styles.planetContainer}>
 
-        <Text style={styles.planetTitle}>Uranus</Text>
-        <Text style={styles.planetSecondTitle}>The sideways planet</Text>
+        <Text style={styles.planetUranusTitle}>Uranus</Text>
+        <Text style={styles.planetUranusSecondTitle}>The sideways planet</Text>
         <Image source={require("../../assets/Images/planets/Uranus.png")}
           style={{ height: 240, width: 400, marginBottom: 30 }} />
 
@@ -38,7 +38,7 @@ export default function Uranus() {
           <View style={{ flexDirection: 'row' }}>
    
               <View style={{ width: 120, textAlign: 'right', marginLeft:30 }}>
-                <Text style={styles.planetText}>Mass {"\n"}
+                <Text style={styles.planetUranusText}>Mass {"\n"}
                   {planet.map(planet => (
                     <Text style={styles.planetData}>{(planet.mass.massValue).toFixed(2)} 10nkg</Text>
                   ))}</Text>
@@ -48,7 +48,7 @@ export default function Uranus() {
           
 
             <View style={{ width: 220, textAlign: 'left', height: 80 }}>
-              <Text style={styles.planetText}>Semimajor Axis {"\n"}
+              <Text style={styles.planetUranusText}>Semimajor Axis {"\n"}
                 {planet.map(planet => (
                   <Text style={styles.planetData}>{(planet.semimajorAxis / 1000000).toFixed(1)} Gm</Text>
                 ))}
@@ -62,7 +62,7 @@ export default function Uranus() {
           <View style={{ flexDirection: 'row' }}>
 
             <View style={{ width: 120, textAlign: 'left', height: 80, marginLeft:30 }}>
-              <Text style={styles.planetText}>Gravity {"\n"}
+              <Text style={styles.planetUranusText}>Gravity {"\n"}
                 {planet.map(planet => (
                   <Text style={styles.planetData}>{(planet.gravity)} m.s-2</Text>
                 ))}
@@ -73,7 +73,7 @@ export default function Uranus() {
 
           <View style={{ flexDirection: 'row' }}>
             <View style={{ width: 220, textAlign: 'right' }}>
-              <Text style={styles.planetText}>Mean Radius {"\n"}
+              <Text style={styles.planetUranusText}>Mean Radius {"\n"}
                 {planet.map(planet => (
                   <Text style={styles.planetData}>{planet.meanRadius} Km</Text>
                 ))}</Text>
@@ -87,7 +87,7 @@ export default function Uranus() {
           <View style={{ flexDirection: 'row' }}>
 
             <View style={{ width: 120, textAlign: 'left', height: 80, marginLeft:30 }}>
-              <Text style={styles.planetText}>Obliquity {"\n"}
+              <Text style={styles.planetUranusText}>Obliquity {"\n"}
                 {planet.map(planet => (
                   <Text style={styles.planetData}>{planet.axialTilt} °</Text>
                 ))}
@@ -98,7 +98,7 @@ export default function Uranus() {
           <View style={{ flexDirection: 'row' }}>
 
             <View style={{ width: 220, textAlign: 'right' }}>
-              <Text style={styles.planetText}>Number Of Moons {"\n"}
+              <Text style={styles.planetUranusText}>Number Of Moons {"\n"}
                 {planet.map(planet => (
                   <Text style={styles.planetData}>{planet.moons.length} kpl</Text>
                 ))}</Text>

@@ -157,7 +157,7 @@ export default StyleSheet.create({
     fontFamily: 'RussoOne',
     color: '#F6F7FF',
     padding: 20,
-   
+
   },
 
   newsSite: {
@@ -172,27 +172,157 @@ export default StyleSheet.create({
   planetTitle: {
     fontFamily: 'RussoOne',
     fontSize: 40,
-  color: '#C5DDFF',
+    color: '#C5DDFF',
     marginTop: 10,
-    alignContent: 'center',
-    alignItems: 'center',
   },
-
-  
-
   planetSecondTitle: {
     fontFamily: 'RussoOne',
     fontSize: 25,
     color: '#4A71AA',
     marginBottom: 40,
-    alignContent: 'center',
-    alignItems: 'center',
   },
-
   planetText: {
     fontFamily: 'RussoOne',
     fontSize: 20,
     color: '#4A71AA',
+    padding: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    flex: 1,
+    textAlign: 'left',
+  },
+
+  planetUranusTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 40,
+    color: '#83F0E4',
+    marginTop: 10,
+  },
+  planetUranusSecondTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 25,
+    color: '#38B1A4',
+    marginBottom: 40,
+  },
+  planetUranusText: {
+    fontFamily: 'RussoOne',
+    fontSize: 20,
+    color: '#38B1A4',
+    padding: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    flex: 1,
+    textAlign: 'left',
+  },
+  
+  planetSaturnTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 40,
+    color: '#D4DDAC',
+    marginTop: 10,
+  },
+  planetSaturnSecondTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 25,
+    color: '#949A76',
+    marginBottom: 40,
+  },
+  planetSaturnText: {
+    fontFamily: 'RussoOne',
+    fontSize: 20,
+    color: '#949A76',
+    padding: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    flex: 1,
+    textAlign: 'left',
+  },
+
+  planetJupiterTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 40,
+    color: '#F0CC8C',
+    marginTop: 10,
+  },
+  planetJupiterSecondTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 25,
+    color: '#8F6F35',
+    marginBottom: 40,
+  },
+  planetJupiterText: {
+    fontFamily: 'RussoOne',
+    fontSize: 20,
+    color: '#8F6F35',
+    padding: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    flex: 1,
+    textAlign: 'left',
+  },
+
+  planetMarsTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 40,
+    color: '#EDB6AC',
+    marginTop: 10,
+  },
+  planetMarsSecondTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 25,
+    color: '#964536',
+    marginBottom: 40,
+  },
+  planetMarsText: {
+    fontFamily: 'RussoOne',
+    fontSize: 20,
+    color: '#964536',
+    padding: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    flex: 1,
+    textAlign: 'left',
+  },
+
+  planetVenusTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 40,
+    color: '#FFE8C4',
+    marginTop: 10,
+  },
+  planetVenusSecondTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 25,
+    color: '#8C5913',
+    marginBottom: 40,
+  },
+  planetVenusText: {
+    fontFamily: 'RussoOne',
+    fontSize: 20,
+    color: '#8C5913',
+    padding: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    flex: 1,
+    textAlign: 'left',
+  },
+
+  planetMercuryTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 40,
+    color: '#E6E2DC',
+    marginTop: 10,
+  },
+  planetMercurySecondTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 25,
+    color: '#716B63',
+    marginBottom: 40,
+  },
+  planetMercuryText: {
+    fontFamily: 'RussoOne',
+    fontSize: 20,
+    color: '#716B63',
     padding: 5,
     marginTop: 10,
     marginBottom: 10,
