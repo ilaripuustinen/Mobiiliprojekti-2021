@@ -9,9 +9,11 @@
     "test": "jest"
   },
   "jest": {
-      "preset": "react-native",
-      "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
-    },
+    "preset": "react-native",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ]
+  },
   "dependencies": {
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",

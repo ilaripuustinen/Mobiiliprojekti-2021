@@ -55,12 +55,11 @@ export default function App() {
 
   return (
     <NavigationContainer theme={MyTheme}>
-      {/* Jos haluaa navigation näkyviin, poista screenOptions={{headerShown: false}} */}
       <Stack.Navigator
         screenOptions={{
-          // headerShown: false,
           headerTransparent: true,
           headerTitleAlign: 'center',
+          headerShadowVisible: false,
         }}>
         <Stack.Screen name="Home"
           component={Home}
@@ -68,15 +67,6 @@ export default function App() {
             headerShown: false
           }}
         />
-        {/* <Stack.Screen name="Planets"
-          component={Planet}
-          options={{
-            headerTitleStyle: {
-              color: 'transparent',
-            },
-            headerTintColor: '#F1F1E6'
-          }}
-        /> */}
         <Stack.Screen name="Horoscope" component={Horoscope}
           options={{
             headerTitleStyle: {
@@ -128,7 +118,7 @@ export default function App() {
             headerTitleStyle: {
               color: 'transparent',
             },
-            headerTintColor: '#F1F1E6'
+            headerTintColor: '#F1F1E6',
           }}
         />
         <Stack.Screen name="Details" component={Details}
