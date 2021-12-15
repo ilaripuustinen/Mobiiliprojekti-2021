@@ -5,6 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
     /*       paddingTop: '200px', */
     fontSize: 30,
   },
@@ -157,5 +158,49 @@ export default StyleSheet.create({
     fontFamily: 'RussoOne',
     fontSize: 15,
     // justifyContent: 'left',
+  },
+
+  planetTitle: {
+    fontFamily: 'RussoOne',
+    fontSize: 40,
+    color: '#ECECEC',
+    /*  backgroundColor: '#16131D', */
+    padding: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    borderBottomEndRadius: 20,
+    borderBottomLeftRadius: 20,
+    borderTopRightRadius: 20,
+    borderTopStartRadius: 20,
+    alignContent: 'center',
+    alignItems: 'center',
+  },
+
+  planetText: {
+    fontFamily: 'RussoOne',
+    fontSize: 20,
+    color: '#477DB4',
+    padding: 5,
+    marginTop: 10,
+    marginBottom: 10,
+    flex: 1,
+    textAlign: 'right'
+  },
+
+  planetInfo: {
+
+    fontSize: 15,
+    color: '#BABABA',
+    paddingTop: 5,
+    paddingBottom: 10,
+    marginTop: 10,
+    marginBottom: 10,
+    alignItems: 'center',
+    textAlign: 'left'
+  },
+  planetContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
