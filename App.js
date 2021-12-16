@@ -60,11 +60,20 @@ export default function App() {
           headerTransparent: true,
           headerTitleAlign: 'center',
           headerShadowVisible: false,
-        }}>
+        }}
+        >
         <Stack.Screen name="Home"
           component={Home}
           options={{
             headerShown: false
+          }}
+        />
+        <Stack.Screen name="Map" component={Map}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: '#F1F1E6'
           }}
         />
         <Stack.Screen name="Horoscope" component={Horoscope}
@@ -75,44 +84,6 @@ export default function App() {
             headerTintColor: '#F1F1E6'
           }}
         />
-        <Stack.Screen name="Aquarius" component={Aquarius}
-          options={{
-            headerTitleStyle: {
-              color: 'transparent',
-            },
-            headerTintColor: '#F1F1E6'
-          }}
-        />
-        <Stack.Screen name="Pisces" component={Pisces} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
-        <Stack.Screen name="Aries" component={Aries} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
-        <Stack.Screen name="Taurus" component={Taurus} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
-        <Stack.Screen name="Gemini" component={Gemini} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
-        <Stack.Screen name="Cancer" component={Cancer} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
-        <Stack.Screen name="Leo" component={Leo} options={{headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
-        <Stack.Screen name="Virgo" component={Virgo} options={{ headerTitleStyle: {color: 'transparent',},headerTintColor: '#F1F1E6'}}/>
-        <Stack.Screen name="Libra" component={Libra} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
-        <Stack.Screen name="Scorpio" component={Scorpio} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
-        <Stack.Screen name="Sagittarius" component={Sagittarius} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
-        <Stack.Screen name="Capricorn" component={Capricorn} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
-
-        <Stack.Screen name="Neptune" component={Neptune} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
-        <Stack.Screen name="Uranus" component={Uranus} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
-        <Stack.Screen name="Saturn" component={Saturn} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
-        <Stack.Screen name="Jupiter" component={Jupiter} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
-        <Stack.Screen name="Mars" component={Mars} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
-        <Stack.Screen name="Earth" component={Earth} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
-        <Stack.Screen name="Venus" component={Venus} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
-        <Stack.Screen name="Mercury" component={Mercury} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }}/>
-
-        <Stack.Screen name="Map" component={Map}
-          options={{
-            headerTitleStyle: {
-              color: 'transparent',
-            },
-            headerTintColor: '#F1F1E6'
-          }}
-        />
-
         <Stack.Screen name="News" component={News}
           options={{
             headerTitleStyle: {
@@ -131,6 +102,33 @@ export default function App() {
             headerTintColor: '#F1F1E6'
           }}
         />
+        <Stack.Screen name="Aquarius" component={Aquarius}
+          options={{
+            headerTitleStyle: {
+              color: 'transparent',
+            },
+            headerTintColor: '#F1F1E6'
+          }}
+        />
+        <Stack.Screen name="Pisces" component={Pisces} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Aries" component={Aries} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Taurus" component={Taurus} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Gemini" component={Gemini} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Cancer" component={Cancer} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Leo" component={Leo} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Virgo" component={Virgo} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Libra" component={Libra} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Scorpio" component={Scorpio} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Sagittarius" component={Sagittarius} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Capricorn" component={Capricorn} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Neptune" component={Neptune} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Uranus" component={Uranus} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Saturn" component={Saturn} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Jupiter" component={Jupiter} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Mars" component={Mars} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Earth" component={Earth} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Venus" component={Venus} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
+        <Stack.Screen name="Mercury" component={Mercury} options={{ headerTitleStyle: { color: 'transparent', }, headerTintColor: '#F1F1E6' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
