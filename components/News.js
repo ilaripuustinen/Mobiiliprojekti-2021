@@ -29,6 +29,7 @@ export default function News({ navigation }) {
                                 </View>
                                 <Text style={styles.newsHeadline}>{item.title}</Text>
                                 <Text style={styles.newsSite}>{item.newsSite}</Text>
+                                <Text style={styles.newsSite}>{item.publishedAt.slice(0,9)}</Text>
                             </View>
                             {/* <View style={{
                                 borderBottomColor: '#98023a', 
