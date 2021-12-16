@@ -27,7 +27,7 @@ export default function Map({ navigation }) {
                         <Image source={require("../assets/Images/map/NeptuneTeksti.png")} style={{
                             width: 160,
                             height: 160,
-                            marginTop: 200
+                            marginTop: 130
 
                         }} />
                     </Pressable>
