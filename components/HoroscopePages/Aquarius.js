@@ -35,6 +35,7 @@ export default function Aquarius() {
                         </View>
                         <View>
                             <Text style={styles.horoTitle}>Aquarius</Text>
+                            <Text style={styles.hstext}>{todayHS["date"]}</Text>
                         </View>
                         <Text style={styles.hstext}>{todayHS["horoscope"]}</Text>
                         <View style={{ paddingBottom: 50 }}>
