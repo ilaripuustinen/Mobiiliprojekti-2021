@@ -38,6 +38,7 @@ export default StyleSheet.create({
   },
 
   hstext: {
+    fontFamily: 'Shalimar',
     fontSize: 18,
     color: 'white',
     textAlign: 'center',
