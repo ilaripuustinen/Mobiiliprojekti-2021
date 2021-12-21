@@ -45,8 +45,8 @@ export default function Map({ navigation }) {
 
                     <TouchableOpacity onPress={() => navigation.navigate('Saturn')}>
                         <Image source={require("../assets/Images/map/SaturnTeksti.png")} style={{
-                            width: 360,
-                            height: 230,
+                            width: 380,
+                            height: 250,
                             maringTop: 80,
                             marginTop: 20
 
